@@ -91,7 +91,7 @@ li.botm:hover{
     width: 240px;
     padding-left: 24px;
     line-height: 40px;
-    box-sizing: padding-box;
+    box-sizing: border-box;
     border: solid 1px #c8c8c8;
     background-image: url(../img/bgleftm.jpg);
 
@@ -106,9 +106,5 @@ li.botm:hover{
   ul.menu>li:hover {
     color: #2c2c2c;
     padding-left: 37px;
-    width: 227px;
-    box-sizing: inherit;
-    height: 40px;
-    width: 240px;
     background-color: #f9f9f9;
   }

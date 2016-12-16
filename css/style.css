@@ -96,7 +96,7 @@ li.botm:hover{
     line-height: 40px;
     box-sizing: border-box;
     border: solid 1px #c8c8c8;
-    background-image: url(../img/bgleftm.jpg);
+    /*background-image: url(../img/bgleftm.jpg);*/
 
   }
   ul.menu>li>a
@@ -107,7 +107,7 @@ li.botm:hover{
     text-decoration: none;
   }
   ul.menu>li:hover {
-    background-color: #f9f9f9;
+    background-image: url(../img/hoverleftmenu.jpg);
     padding-left: 37px;
     }
   /*content*/

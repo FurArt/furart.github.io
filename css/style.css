@@ -10,12 +10,13 @@ body {
 .container {
   margin: 0 auto;
   width: 1060px;
-  height: 900px;
+  height: 960px;
   background-color: #ffffff;
   box-shadow: 0 0 10px #c4c8c4;
 }
+/*header*/
 header {
-  margin: 0px 50px 0px 40px;
+  margin: 0px 60px 0px 40px;
   height: 170px;
   width: 965px;
 }
@@ -31,7 +32,7 @@ header {
 }
 ul.head {
   display: block;
-  margin-top: 29px;
+
   margin:0 auto;
 }
 li.botm:first-child{
@@ -57,7 +58,7 @@ li.botm:last-child{
   font-family: 'Open Sans', sans-serif;
   color: #ffffff;
   text-shadow: 1px 1px 1px #444444;
-  font-size: 11px;
+  font-size: 11pt;
 }
 li.botm a {
 font-family: 'Open Sans', sans-serif;
@@ -73,12 +74,14 @@ li.botm:hover{
   box-shadow: 0 0 2px #c4c8c4;
 }
 .containerbox{
-  margin: 40px 50px 55px 40px;
-  width: 965px;
-  height: 645px;
+  margin: 40px 50px 0px 40px;
+  width: 970px;
+  display: inline-flex;
 }
+/*left menu*/
 .leftmen {
   float: left;
+  height: inherit;
   }
   ul.menu {
     display: block;
@@ -104,7 +107,78 @@ li.botm:hover{
     text-decoration: none;
   }
   ul.menu>li:hover {
-    color: #2c2c2c;
-    padding-left: 37px;
     background-color: #f9f9f9;
+    padding-left: 37px;
+    }
+  /*content*/
+  .content {
+    padding-left: 45px;
+    width: 678
+    height: auto;
+    float: right;
+    display: block;
   }
+.boxt{
+  margin: 40px 0px 0px 25px
+}
+div.boxt>p {
+  color: #2c2c2c;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11pt;
+  line-height: 21px;
+}
+/*footer*/
+
+/*footer {
+  margin: 50px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  background-image: url(../img/footer.jpg);
+  display: block;
+}*/
+.footer {
+  width: 965px;
+  margin: 0 auto;
+  margin-top: 60px;
+  display: block;
+  background-image: url(../img/footer.jpg);
+  }
+li.bot:first-child{
+  padding-left: 24px;
+  padding-right: 64px;
+}
+li.bot:nth-child(2){
+  padding-left: 25px;
+  padding-right: 25px;
+}
+li.bot:nth-child(4){
+  padding-left: 25px;
+  padding-right: 333px;
+}
+li.bot:last-child{
+  /*margin-right: ;*/
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+  li.bot {
+  display: inline-block;
+  line-height: 40px;
+  font-family: 'Open Sans', sans-serif;
+  color: #2c2c2c;
+  text-shadow: 1px 1px 1px #444444;
+  font-size: 11pt;
+}
+li.bot a {
+font-family: 'Open Sans', sans-serif;
+color: #ffffff;
+text-shadow: 1px 1px 1px #444444;
+font-size: 11pt;
+text-decoration: none;
+}
+li.bot:hover{
+  height: 40px;
+  width: auto;
+text-decoration:underline;
+}

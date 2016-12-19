@@ -30,7 +30,7 @@ header {
   margin: 0 auto;
   background-image: url(../img/container.jpg);
 }
-ul.head {
+.head {
   display: block;
 
   margin:0 auto;

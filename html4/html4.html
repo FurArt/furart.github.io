@@ -2,48 +2,51 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/html4/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
     <title>Home work 4 - Furhas Artem</title>
   </head>
   <body>
   <div class="conteiner">
-      <div class="header">
+      <div class="header clearfix">
         <div class="logo">
-          <img src="" alt="" class="logo">
-          <h6></h6>
+          <h6><a href="#">Путишествия по Азии</a></h6>
         </div>
-        <div class="contact">
+        <div class="contact clearfix">
           <p><strong>Наши контакты:</strong></p>
           <p>+9-098-765-4321</p>
           <p>+9-0123-456-890</p>
           <p>info@asia-holidays.com</p>
         </div>
 
-        <ul class="lan">
-          <li><a href="#"><img src="" alt="" class="country"></a></li>
-          <li><a href="#"><img src="" alt="" class="country"></a></li>
-          <li><a href="#"><img src="" alt="" class="country"></a></li>
-          <li><a href="#"><img src="" alt="" class="country"></a></li>
-          <li><a href="#"><img src="" alt="" class="country"></a></li>
-          <li><a href="#"><img src="" alt="" class="country"></a></li>
+        <ul class="country ">
+          <li><a class="countrylink" href="#"><img src="img/india42_42.jpg" alt="Индия" >Индия</a></li>
+          <li><a class="countrylink" href="#"><img src="img/nepal42_42.jpg" alt="Непал" >Непал</a></li>
+          <li><a class="countrylink" href="#"><img src="img/tebet42_42.jpg" alt="Тибет" >Тибет</a></li>
+          <li><a class="countrylink" href="#"><img src="img/butan42_42.jpg" alt="Бутан" >Бутан</a></li>
+          <li><a class="countrylink" href="#"><img src="img/shri42_42.jpg" alt="Шри-Ланка" >Шри-Ланка</a></li>
+          <li><a class="countrylink" href="#"><img src="img/maldivi42_42.jpg" alt="Мальдивы" >Мальдивы</a></li>
         </ul>
-        <div class="ocean"><img src="" alt=""></div>
       </div>
-  <div class="sidebar">
-     <ul>
-       <li><a href="#">Главная</a></li>
-       <li class="travel">Путешествие
-         <ul class="secondmenu">
+        <div class="ocean ">
+        </div>
+     <ul class="sidebar">
+       <li><a href="#">Главная
+          </a>
+      </li>
+       <li>
+         <a href="#">Путешествие&#9660;</a>
+         <ul class="secondmenu" id="travel">
            <li><a href="#">Путешествие 1</a></li>
            <li><a href="#">Путешествие 2</a></li>
            <li><a href="#">Путешествие 3</a></li>
            <li><a href="#">Путешествие 4</a></li>
            <li><a href="#">Путешествие 5</a></li>
          </ul>
-         ul>li*4{<a href="#"></a>}
-       </li>
-       <li class="services"> Услуги
-         <ul class="secondmenu">
+      </li>
+       <li> <a href="#">Услуги &#9660;</a>
+         <ul class="secondmenu" id="services">
           <li><a href="#">Услуги 1</a></li>
           <li><a href="#">Услуги 2</a></li>
           <li><a href="#">Услуги 3</a></li>
@@ -51,8 +54,8 @@
           <li><a href="#">Услуги 5</a></li>
         </ul>
       </li>
-       <li class="partners">Партнеры
-         <ul class="secondmenu">
+       <li><a href="#">Партнеры&#9660;</a>
+         <ul class="secondmenu" id="partners">
           <li><a href="#">Партнеры 1</a></li>
           <li><a href="#">Партнеры 2</a></li>
           <li><a href="#">Партнеры 3</a></li>
@@ -64,9 +67,9 @@
        <li><a href="#">О нас</a></li>
        <li><a href="#">Контакты</a></li>
      </ul>
-  </div>
-  <div class="leftcolum">
-    <h1>Информация</h1>
+
+  <div class="leftcolum clearfix">
+    <h1 class="infor">Информация</h1>
      <p>Lorem ipsum dolor sit amet</p>
      <p>Lorem ipsum dolor sit amet</p>
      <p>Lorem ipsum dolor sit amet</p>
@@ -80,8 +83,8 @@
      <p>Lorem ipsum dolor sit amet</p>
      <p>Lorem ipsum dolor sit amet</p>
   </div>
-  <div class="rightcolum">
-    <h1>Новости</h1>
+  <div class="rightcolum clearfix">
+    <h1 class="news">Новости</h1>
     <p>Lorem ipsum dolor sit amet</p>
     <p>Lorem ipsum dolor sit amet</p>
     <p>Lorem ipsum dolor sit amet</p>
@@ -101,7 +104,7 @@
 
   </div>
 <div class="copyright">
-  <p>
+  <p class="copyright">
 Copyright&copy; asia-holidays.com. 2010
   </p>
 </div>

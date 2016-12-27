@@ -8,6 +8,8 @@ p {
     font-family: "Helveti Caneue", sans-serif;
 }
 * {
+  color: rgb(255, 255, 255);
+  font-family: "Helveti Caneue", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -129,7 +131,7 @@ background: linear-gradient(177deg, rgb(96, 172, 222) 0%, rgb(57, 141, 201) 54%,
    width: 560px;
    left: 29%;
    position: absolute;
-   top: 30%;
+   top: 21%;
    background-color: rgba(0, 0, 0, 0.5);
 
  }
@@ -169,6 +171,10 @@ background: linear-gradient(177deg, rgb(96, 172, 222) 0%, rgb(57, 141, 201) 54%,
    text-align: center;
    clear: left;
  }
+ .last {
+   margin: 0px;
+
+ }
 .lineou {
   clear: left;
   height: 40px;
@@ -181,8 +187,13 @@ background: linear-gradient(177deg, rgb(96, 172, 222) 0%, rgb(57, 141, 201) 54%,
  }
  .lineou p::after,
  .lineou p::before{
-   display: block;
+   content: ' ';
+   height: 3px;
+   width: 125px;
+   display: inline-block;
    background-image: url(../img/row.jpg);
+   margin: 5px 12px 5px 12px;
+   clear: left;
  }
 
  .row input{
@@ -210,23 +221,52 @@ background: linear-gradient(177deg, rgb(96, 172, 222) 0%, rgb(57, 141, 201) 54%,
  }
 
  input[type="checkbox"]{
-   display: inline-block;
-   margin: 0px;
-   width: 10px;
-   height: 10px;
-  padding-right: 10px;
-  width: 20px;
-  box-shadow: none;
-
+    display: inline-block;
+    margin: 0px;
+    width: 10px;
+    height: 10px;
+    padding-right: 10px;
+    width: 20px;
+    box-shadow: none;
  }
- input[type="checkbox"]:hover,
- input[type="checkbox"]:active{
-   box-shadow: none;
+ .submit{
+   margin-bottom: 10px;
+   width: 560px;
+   height: 40px;
+   display: block;
+  float: left;
+   text-align: center;
+   clear: left;
  }
 
+input[type="submit"]{
+width: 150px;
+height: 35px;
+cursor: pointer;
+background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.89) 0%, rgba(100, 167, 229, 0.41) 3%, rgba(100, 167, 227, 0.81) 6%, rgba(99, 168, 227, 0.99) 8%, rgba(68, 154, 211, 0.93) 92%, rgba(68, 154, 211, 0.69) 94%, rgba(68, 153, 210, 0.35) 97%);
+background: -o-linear-gradient(top, rgba(0, 0, 0, 0.89) 0%, rgba(100, 167, 229, 0.41) 3%, rgba(100, 167, 227, 0.81) 6%, rgba(99, 168, 227, 0.99) 8%, rgba(68, 154, 211, 0.93) 92%, rgba(68, 154, 211, 0.69) 94%, rgba(68, 153, 210, 0.35) 97%);
+background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.89) 0%, rgba(100, 167, 229, 0.41) 3%, rgba(100, 167, 227, 0.81) 6%, rgba(99, 168, 227, 0.99) 8%, rgba(68, 154, 211, 0.93) 92%, rgba(68, 154, 211, 0.69) 94%, rgba(68, 153, 210, 0.35) 97%);
+background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.89) 0%, rgba(100, 167, 229, 0.41) 3%, rgba(100, 167, 227, 0.81) 6%, rgba(99, 168, 227, 0.99) 8%, rgba(68, 154, 211, 0.93) 92%, rgba(68, 154, 211, 0.69) 94%, rgba(68, 153, 210, 0.35) 97%);
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0.89) 0%, rgba(100, 167, 229, 0.41) 3%, rgba(100, 167, 227, 0.81) 6%, rgba(99, 168, 227, 0.99) 8%, rgba(68, 154, 211, 0.93) 92%, rgba(68, 154, 211, 0.69) 94%, rgba(68, 153, 210, 0.35) 97%);
+border-radius: 4px;
+margin: 0 auto;
+padding: 0px;
+border: 0px;
+font-weight: bold;
+}
+.maincheckbox{
+  width: 560px;
+  height: auto;
+  display: block;
+ float: left;
+  text-align: center;
+  clear: left;
+  margin: 20px 0px 20px;
 
- .row label{
-   margin-left: 110px;
+}
+
+ .maincheckbox label{
+   margin-left: 100px;
    display: block;
    width: 275px;
    font-family: "Helveti Caneue", sans-serif;
@@ -234,4 +274,8 @@ background: linear-gradient(177deg, rgb(96, 172, 222) 0%, rgb(57, 141, 201) 54%,
    line-height: 16px;
    font-size: 14px;
 
+ }
+ .lasttext
+ {
+   font-size: 11px;
  }

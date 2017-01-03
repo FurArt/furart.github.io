@@ -1,0 +1,112 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+table {
+  width: 500px;
+  height: 541px;
+  columns: 6;
+  border: none;
+  border-collapse: collapse;
+}
+td {
+  border: 10px solid #000000;
+  /*width: 48px;
+  height: 38px;*/
+}
+.first{
+  height: 37px;
+}
+.element1 {
+  border-top: none;
+  border-left:10px solid white;
+  width: 245px;
+}
+.element2{
+  border-top: 10px solid white;
+  width: 204px;
+}
+.element3 {
+background-color: yellow;
+border-top: 10px solid yellow;
+border-right: none;
+width: 163px;
+}
+.element4{
+  width: 37px;
+  height: 60px;
+  border-left: none;
+}
+.element5{
+  background-color: red;
+  border-bottom:10px solid red;
+  height: 10px;
+  width: 290px;
+}
+.element6{
+  background-color: yellow;
+  height: auto;
+  width: auto;
+}
+.element7{
+height: 20px;
+width: 20px;
+background-color: red;
+}
+.element8{
+  width: 2px;
+  height: 10px;
+}
+.element9{
+  height: 10px;
+  border-bottom: none;
+  border-left: none;
+}
+.element10{
+  height: 10px;
+}
+.element11{
+  border-left: none;
+  border-top: none;
+  height: 50px;
+}
+.element12{
+  height: 10px;
+  width: 31px;
+  background-color: black;
+}
+.eith{
+  height: 20px;
+}
+.nine {
+  height: 20px;
+}
+.element13{
+  height: 20px;
+  width: 30px;
+
+}
+.element17{
+  background-color: blue;
+}
+.element15{
+  background-color: yellow;
+}
+.element18{
+  width: 21px;
+}
+.element19{
+  width: 20px;
+  background-color: black;
+}
+.element6,
+.element10,
+.element14,
+.element15,
+.element18,
+.element16 {
+  border: none;
+}
+.element17{
+  border-right: none;
+}

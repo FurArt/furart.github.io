@@ -228,15 +228,18 @@ background: linear-gradient(177deg, rgb(96, 172, 222) 0%, rgb(57, 141, 201) 54%,
    line-height: 40px;
    font-size: 14px;
  }
+
+
  .lineou p::after,
  .lineou p::before{
    content: ' ';
-   height: 3px;
+   height: 1px;
    width: 125px;
    display: inline-block;
-   background-image: url(../img/row.jpg);
    margin: 5px 12px 5px 12px;
    clear: left;
+   background: #ccc;
+   border-bottom: 1px solid #000;
  }
 
  .row input{

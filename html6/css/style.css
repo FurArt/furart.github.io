@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  }
+  p {
+      display: block;
+      -webkit-margin-before: 0px;
+      -webkit-margin-after: 0px;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
+  }
+  ul, menu, dir {
+      list-style-type: none;;
+    }
+
+body {
+  background-color: #fff;
+  width: 910px;
+  margin: 0 auto;
+  }
+  .clerfix::after{
+    display: block;
+    content: ' ';
+    clear: both;
+  }
+  /*header top*/
+  .top{
+    margin: 22px 0 0 -1px;
+  }
+  .phone{
+    width: 308px;
+    position: relative;
+    display: inline-block;
+    float: left;
+    line-height: 25px;
+    font:18px Arial;
+    color:   #5e696d;
+    letter-spacing: 0.03em;
+    margin: 0 0 0 0;
+    text-align: justify;
+  }
+  .phone p::before{
+      content:' ';
+      width: 22px;
+      height: 22px;
+      background: #0c3357;
+      background: -webkit-linear-gradient(#0c3357, #1e6584);
+      background: -o-linear-gradient(#0c3357, #1e6584);
+      background: -moz-linear-gradient(#0c3357, #1e6584);
+      background: linear-gradient(#0c3357, #1e6584);
+      background-repeat: no-repeat;
+      /*background-image: url(../img/phone_icon.png);*/
+      border-radius: 22px;
+      display: inline-block;
+      float: left;
+      margin: 0 3px 0 0;
+      }
+     section.phone::before{
+      position: absolute;
+      z-index: 1;
+      content: '';
+      float: left;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      top: 0;
+      left: 3px;
+      background-image: url(../img/phone_icon.png);
+      background-repeat: no-repeat;
+      margin: 0 0 0 0;
+      padding-right: 3px;
+    }
+    .sign{
+      margin: -4px 0 0 0;
+      padding: 0 0 0 20px;
+      position: relative;
+      left:0;
+      float: left;
+      height: 26px;
+      width: 475px;
+      /*width: 355px;*/
+      background: #206988;
+      background: -webkit-linear-gradient(#206988, #0c3256);
+      background: -o-linear-gradient(#206988, #0c3256);
+      background: -moz-linear-gradient(#206988, #0c3256);
+      background: linear-gradient(#206988, #0c3256);
+      background-repeat: no-repeat;
+      box-shadow: 3px 3px 3px #969696;
+      border-radius: 3px;
+      font: 11px 'Lucida Sans Unicode';
+      color: #fff;
+    }
+    form.sign::before{
+      position: absolute;
+      z-index: 1;
+      content: '';
+      float: left;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      top: 4px;
+      left: 7px;
+      background-image: url(../img/sign_icon.png);
+      background-repeat: no-repeat;
+      margin: 0 0 0 0;
+    }
+    input.signelem[type="text"]{
+      margin: 4px 0 0 0;
+      color: #97a2a6;
+      /*font: 11px 'Lucida Sans Unicode';*/
+      height: 16px;
+      width: 111px;
+      border: none;
+      border-radius: 1px;
+      box-shadow: 0px 0px 2px #82949c;
+      padding: 0 0 0 3px;
+      margin: 5px 1px 0 4px;
+    }
+    .sign a{
+      line-height: 11px;
+      padding: 0px 4px 0 0;
+      margin: 0px -6px 0 3px;
+      /*display: block;*/
+      color: #fff;
+    }
+    a.signin::after{
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height: 9px;
+      border-right: solid 1px #fff;
+      margin: 0px 0px 0 3px;
+    }
+    a.fogetpas{
+      color: #bfbfbf;
+      text-decoration: underline;
+      padding: 0 0 0 14px;
+      letter-spacing: 0.1em;
+    }
+    .top nav{
+      margin:-3px 0px 0 17px;
+      text-align: center;
+      float: left;
+      width: 75px;
+      height: 20px;
+      background-repeat: no-repeat;
+      border: 1px solid #c1c8cb;
+      border-radius: 20px;
+      box-shadow: 0px 0px 2px #dde1e2;
+    }
+    .home,
+    .mapsite,
+    .sendmail{
+      height: inherit;
+      float: left;
+      display: inline-block;
+      width: 33%;
+    }
+    .logo{
+      position: relative;
+      clear: left;
+      padding: 10px 0 0 0;
+      margin-right: 0px;
+      }
+      .logo img{
+        transform: scale(1.0033);
+      }
+
+      /*navigation*/
+    .cart{
+      margin: 0 0 0 0;
+      float: right;
+    }
+    .cartelement{
+      float: left;
+    }
+    .sidebar ul{
+      text-align: center;
+    }
+    .sidebarelem{
+      float: left;
+    }
+    .sidebar{
+      text-align: center;
+      width: inherit;
+      height: 35px;
+      background: #17191b;
+      background: -webkit-linear-gradient(#576068, #000 30%);
+      background: -o-linear-gradient(#576068, #000 30%);
+      background: -moz-linear-gradient(#576068, #000 30%);
+      background: linear-gradient(#576068, #000 30%);
+      background-repeat: no-repeat;
+      box-shadow: 2px 2px 4px #c9c9c9;
+      border-radius: 5px;
+      line-height: 35px;
+      font: 15px 'Lucida Sans Unicode';
+    }
+    .sidebar a{
+      color: #b1bcc0;
+      display: inline-block;
+    }
+    .sidebar li{
+      text-align: center;
+      line-height: 35px;
+    }
+    .sidebar ul{
+      float: right;
+    }
+    .sidebarbt{
+      width: 500px;
+      margin: 2px 92px 0 0;
+      padding: 0 0 0 0;
+    }
+    .sidebarelem{
+      width: 19%;
+    }
+    .cartelementside::before{
+      content: '';
+      display: inline-block;
+      float: left;
+      width: 50px;
+      height: 35px;
+      margin: 8px 0 0 0;
+      background-image: url(../img/cart_icon.png);
+      background-repeat: no-repeat;
+    }
+    output{
+      color: #0d5a8f;    
+    }
+    output[name="summa"]:after{
+      content: 'грн';
+      display: inline-block;
+      float: right;
+    }

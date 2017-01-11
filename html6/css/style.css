@@ -453,6 +453,7 @@ h5::after{
 .rightmenu {
   clear: left;
   float: left;
+  margin: 0 0 6px 0;
 }
 .secondrighth5{
   margin: 4px 0 0 0;
@@ -492,7 +493,7 @@ h5::after{
     background: -webkit-linear-gradient(#e4e7e8, #93a7b0);
     background: -o-linear-gradient(#e4e7e8, #93a7b0);
     background: -moz-linear-gradient(#e4e7e8, #93a7b0);
-    background: linear-gradient( #e4e7e8, #93a7b0s);
+    background: linear-gradient( #e4e7e8, #93a7b0);
     background-repeat: no-repeat;
     float: left;
     width: 527px;
@@ -569,33 +570,50 @@ h2{
   height: auto;
   float: left;
   /*position: relative;*/
-  padding: 0px 11px 5px 0;
+  padding: 0px 0 3px 0;
   margin: 0.22em 0px 0px 5px;
 }
 .rightmenu input[type="checkbox"]{
   display: none;
   /*position: absolute;*/
 }
- label.sforrightCB{
-   position: relative;
+.sforrightCB{
+  float: left;
+  width: 30px;
+  height: 10px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  font: 13px 'Lucida Sans Unicode';
+  color: #465961;
+  /*position: relative;*/
+}
+ label.sforrightCB::before {
+   content: '';
+   /*position: relative;*/
    cursor: pointer;
    float: left;
-    /*position: absolute;*/
-    width: 11px;
-    height: 11px;
-    background: url(../img/checkbox.png) no-repeat;
-    background-position: 0px -11px;
-}
-.right  input[type="checkbox"]:checked + label.sforrightCB {
-  /*position: absolute;
-  top: 0px;
-  right: 0px;*/
-  float: left;
+   clear: left;
    /*position: absolute;*/
    width: 11px;
-   height: 11px;
+   height: 10px;
    background: url(../img/checkbox.png) no-repeat;
-   background-position: 0px 0px;
+   background-position: 0px -11px;
+   margin: 7px 0 0 7px;
+   padding: 0 0 0 14px;
+}
+input[type="checkbox"]:checked + label.sforrightCB::before {
+  content: '';
+  /*position: relative;*/
+  cursor: pointer;
+  float: left;
+  clear: left;
+  /*position: absolute;*/
+  width: 11px;
+  height: 11px;
+  background: url(../img/checkbox.png) no-repeat;
+  background-position: 0px 0px;
+  margin: 7px 0 0 7px;
+  padding: 0 0 0 14px;
 }
 
 input[type="submit"]{
@@ -613,7 +631,7 @@ input[type="submit"]{
   border: #a7abae solid 1px;
   border-radius: 25px;
   box-shadow: 2px 2px 3px #d5d5d5;
-  margin: 12px 44px 0 11px;
+  margin: 17px 0 0 12px;
 }
   .brand{
     clear: both;
@@ -641,9 +659,9 @@ input[type="submit"]{
     height: 18px;
     float: none;
     display: block;
-    width: 307px;
+    width: auto;
     margin: 0 auto;
-    padding: 0 0 0 0;
+    padding: 0 0 0 307px;
   }
   .navfotele,
   .lastoff{
@@ -656,18 +674,18 @@ input[type="submit"]{
   .lastoff a{
     display: block;
     color: #bec6c9;
-    font: 13px Arial;
+    font: 12px Arial;
     line-height: 18px;
   }
 .navfotele a::after{
   content: '';
   float: right;
-  height: 14px;
+  height: 16px;
   display:  block;
   width: 14px;
   padding: 0px 0 0 0;
   border-right: solid 1px #bec6c9;
-  margin: 0 12px 0 0;
+  margin: 0 13px 0 0;
 }
 .navfotele a:hover,
 .lastoff a:hover{

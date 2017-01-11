@@ -33,11 +33,11 @@
         </section>
 
         <ul class="sidebarbt">
-          <li class="sidebarelem"><a href="#">О КОМПАНИ</a></li>
-          <li class="sidebarelem"><a href="#">ОПЛАТА</a></li>
-          <li class="sidebarelem"><a href="#">ДОСТАВКА</a></li>
-          <li class="sidebarelem"><a href="#">СТАТЬИ</a></li>
-          <li class="sidebarelem"><a href="#">КОНТАКТЫ</a></li>
+          <li class="sidebarelem"><a class="sidebarlink" href="#">О КОМПАНИ</a></li>
+          <li class="sidebarelem"><a class="sidebarlink" href="#">ОПЛАТА</a></li>
+          <li class="sidebarelem"><a class="sidebarlink" href="#">ДОСТАВКА</a></li>
+          <li class="sidebarelem"><a class="sidebarlink" href="#">СТАТЬИ</a></li>
+          <li class="sidebarelem"><a class="sidebarlink" href="#">КОНТАКТЫ</a></li>
         </ul>
       </nav>
       <section class="mainside">
@@ -45,7 +45,7 @@
           <header>
             <h6><p>каталог продукции:</p></h6>
           </header>
-          <h5>шины</h5>
+          <h5 class="firsth">шины</h5>
           <ul class="leftmenu">
             <li class="elemmenu"><a href="">Hаименование 1</a></li>
             <li class="elemmenu"><a href="">Hаименование 2</a></li>
@@ -69,7 +69,9 @@
         </nav>
         <nav class="right">
             <h6>БРЕНДЫ:</h6>
-            <h5>ШИНЫ</h5>
+            <section class="rightnav">
+
+            <h5 class="firstrighth5">ШИНЫ</h5>
             <form action="#" class="rightmenu clerfix">
               <label for="brand 1">
                 <input type="checkbox" name="brand 1" id="brand 1"></input>
@@ -91,7 +93,7 @@
 
               </label>
             </form>
-            <h5>ДИСКИ</h5>
+            <h5 class="secondrighth5">ДИСКИ</h5>
             <form action="#" class="rightmenu clerfix">
             <label for="brand 4"><input type="checkbox" name="brand 1" id="brand 4"></input>
               <label for="brand 4" class="sforrightCB"></label>
@@ -108,6 +110,7 @@
               <input type="submit" name="in" value="ВЫБРАТЬ">
 
             </form>
+          </section>
 
         </nav>
         <main class="clerfix">
@@ -129,7 +132,8 @@
           <div class="imgpr">
             <img src="img/nokian_pr.jpg"alt="Nokian">
           </div>
-            <output name="price_product">115.00</output></div>
+            <output name="price_product">115.00</output>
+          </div>
           <div class="product">
             <header>
               <h1>Hankook</h1>
@@ -138,7 +142,8 @@
             <div class="imgpr">
               <img src="img/hankok_pr.jpg" alt="Hankook">
             </div>
-            <output name="price_product">393.00</output></div>
+            <output name="price_product">393.00</output>
+          </div>
             <div class="product">
               <header>
                 <h1>Goodyear</h1>
@@ -157,7 +162,8 @@
               <div class="imgpr">
                 <img src="img/nokian_pr.jpg"alt="Nokian">
               </div>
-              <output name="price_product">115.00</output></div>
+              <output name="price_product">115.00</output>
+            </div>
             <div class="product">
               <header>
                 <h1>Hankook</h1>
@@ -166,7 +172,9 @@
               <div class="imgpr">
                 <img src="img/hankok_pr.jpg" alt="Hankook">
               </div>
-              <output name="price_product">393.00</output></div><div class="product">
+              <output name="price_product">393.00</output>
+            </div>
+            <div class="product">
                 <header>
                   <h1>Goodyear</h1>
                   <h2>Ultra Grip Extreme</h2>
@@ -184,7 +192,8 @@
                 <div class="imgpr">
                   <img src="img/nokian_pr.jpg"alt="Nokian">
                 </div>
-                <output name="price_product">115.00</output></div>
+                <output name="price_product">115.00</output>
+              </div>
               <div class="product">
                 <header>
                   <h1>Hankook</h1>
@@ -203,6 +212,8 @@
           <img src="img/brand_4.png" alt="" class="brandelem">
           <img src="img/brand_5.png" alt="" class="brandelem">
           <img src="img/brand_6.png" alt="" class="brandelem">
+          <img src="img/brand_7.png" alt="" class="brandelem">
+          <img src="img/brand_8.png" alt="" class="brandelem">
         </section>
         <footer>
           <ul class="navfot">
@@ -211,8 +222,7 @@
             <li class="navfotele"><a href="#">Статьи</a></li>
             <li class="lastoff"><a href="#">Контакты</a></li>
           </ul>
-          <br>
-          <address class="copiright">
+        <address class="copiright">
 Создание сайта © Global Vision
           </address>
 

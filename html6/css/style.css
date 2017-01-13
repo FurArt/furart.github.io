@@ -35,7 +35,8 @@ body {
     display: inline-block;
     float: left;
     line-height: 25px;
-    font:18px Arial;
+    font-size:18px;
+    font-family:  Arial, sans-serif;
     color:   #5e696d;
     letter-spacing: 0.03em;
     margin: 0 0 0 0;
@@ -89,7 +90,8 @@ body {
       background-repeat: no-repeat;
       box-shadow: 3px 3px 3px #969696;
       border-radius: 3px;
-      font: 11px 'Lucida Sans Unicode';
+      font-size:11px;
+      font-family: 'Lucida Sans Unicode', sans-serif;
       color: #fff;
     }
     form.sign::before{
@@ -109,7 +111,7 @@ body {
     input.signelem[type="text"]{
       margin: 4px 0 0 0;
       color: #97a2a6;
-      /*font: 11px 'Lucida Sans Unicode';*/
+      /*font: 11px 'Lucida Sans Unicode', sans-serif;*/
       height: 16px;
       width: 111px;
       border: none;
@@ -226,6 +228,7 @@ body {
       width: 131%;
       /* vertical-align: middle; */
       margin: 0 -19px 0 0;
+      font-family: 'Lucida Sans Unicode', sans-serif;
     }
      a.sidebarlink:hover{
       text-align: center;
@@ -258,7 +261,8 @@ body {
     box-shadow: 2px 2px 4px #c9c9c9;
     border-radius: 5px;
     line-height: 35px;
-    font: 12px 'Lucida Sans Unicode';
+    font-size: 12px;
+    font-family: 'Lucida Sans Unicode', sans-serif;
     margin: 6px 0 162px -9px;
 }
     .sidebar a{
@@ -318,7 +322,8 @@ body {
    height: 21px;
    /* line-height: 76px; */
    color: #114165;
-   font: 13px 'Lucida Sans Unicode';
+   font-size: 12px;
+   font-family: 'Lucida Sans Unicode', sans-serif;
    border: solid 1px #8b979c;
    border-radius: 24px;
    box-shadow: 2px 2px 3px #969696;
@@ -362,7 +367,8 @@ body {
     height: 25px;
     line-height: 25px;
     color: #114165;
-    font: 13px 'Lucida Sans Unicode';
+    font-size: 13px;
+    font-family: 'Lucida Sans Unicode', sans-serif;
     border: solid 1px #8b979c;
     border-radius: 24px;
     box-shadow: 2px 2px 3px #fff;
@@ -415,7 +421,8 @@ h5::after{
   height: 21px;
   line-height: 25px;
   color: #114165;
-  font: 13px 'Lucida Sans Unicode';
+  font-size: 13px;
+  font-family: 'Lucida Sans Unicode', sans-serif;
   border: solid 1px #8b979c;
   border-radius: 24px;
   box-shadow: 2px 2px 3px #fff;
@@ -474,14 +481,16 @@ h5::after{
   .elemmenu a{
     height: 20px;
     line-height: 20px;
-    font: 12px 'Lucida Sans Unicode';
+    font-size: 12px;
+    font-family: 'Lucida Sans Unicode', sans-serif;
     color: #465961;
     display: block;
   }
   .elemmenu a:hover{
     height: 20px;
     line-height: 20px;
-    font: 14px Arial;
+    font-size: 14px;
+    font-family: Arial;
     font-weight: bold;
     font-style: italic;
     text-decoration: underline;
@@ -507,7 +516,8 @@ h5::after{
     -webkit-margin-after: 0;
     float: left;
     color: #206988;
-    font: 15px 'Lucida Sans Unicode';
+    font-size: 15px;
+    font-family: 'Lucida Sans Unicode', sans-serif;
     width: 137px;
     padding: 13px 0px 0px 0;
     line-height: 2px;
@@ -516,7 +526,8 @@ h2{
   clear: left;
   float: left;
   color: #000;
-  font: 13px 'Lucida Sans Unicode';
+  font-size:13px;
+  font-family: 'Lucida Sans Unicode', sans-serif;
   width: 144px;
   padding: 1px 0 0 0;
 }
@@ -539,7 +550,8 @@ h2{
     float: left;
     clear: left;
     width: 160px;
-    font: 16px Arial;
+    font-size: 16px;
+    font-family:  Arial;
     font-style: italic;
     font-weight: 900;
     margin: -3px 0 0 0;
@@ -583,7 +595,8 @@ h2{
   height: 10px;
   margin: 0 0 0 0;
   padding: 0 0 0 0;
-  font: 13px 'Lucida Sans Unicode';
+  font-size: 13px;
+  font-family: 'Lucida Sans Unicode', sans-serif;
   color: #465961;
   /*position: relative;*/
 }
@@ -612,7 +625,7 @@ input[type="checkbox"]:checked + label.sforrightCB::before {
   height: 11px;
   background: url(../img/checkbox.png) no-repeat;
   background-position: 0px 0px;
-  margin: 7px 0 0 7px;
+  margin: 6px 0 0 7px;
   padding: 0 0 0 14px;
 }
 
@@ -621,7 +634,8 @@ input[type="submit"]{
   height: 25px;
   color: #fff;
   line-height: 25px;
-  font: 11px Arial, sans-serif;
+  font-size: 11px;
+  font-family: Arial, sans-serif;
   background: #206988;
   background: -webkit-linear-gradient(#206988, #114165 59%, #0c3256 100%);
   background: -o-linear-gradient(#206988, #114165 59%, #0c3256 100%);
@@ -674,7 +688,8 @@ input[type="submit"]{
   .lastoff a{
     display: block;
     color: #bec6c9;
-    font: 12px Arial;
+    font-size: 12px;
+    font-family:  Arial, sans-serif;
     line-height: 18px;
   }
 .navfotele a::after{
@@ -694,6 +709,7 @@ input[type="submit"]{
 address{
   margin: 12px 0 0 -3px;
   color: #7f4740;
-  font: 10px Arial, sans-serif;
+  font-size: 10px;
+  font-family: Arial, sans-serif;
   display: block;
 }

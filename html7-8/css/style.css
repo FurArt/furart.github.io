@@ -7,12 +7,7 @@ body{
   display: flex;
   flex-wrap: wrap;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-p{
+h1, h2, h3, h4, h5, p, h6{
   font-family: 'League Gothic', sans-serif;
 }
 a{
@@ -49,7 +44,15 @@ h4 {
   letter-spacing: 0.07em;
 }
 h5{
-
+ font-size: 48px;
+ line-height: 48px;
+ text-transform: uppercase;
+ color: #454545;
+}
+h6{
+  font-size: 30px;
+  color: #454545;
+  margin-bottom: 10px;
 }
 .top__laer{
   background: url(../img/backgroun__top.jpg) 50% 0% no-repeat;
@@ -92,6 +95,13 @@ h5{
   height: auto;
   text-align: center;
 }
+.copyright__text{
+  color: #fff;
+  font-size: 16px;
+  text-shadow: 1px 1px 3px #000;
+  font-family: "Open Sans";
+  margin: 7px 0 0 0;
+}
 .hide_block{
   display: none;
 }
@@ -117,7 +127,7 @@ h5{
   display: flex;
   position: absolute;
   top: 20%;
-  right: 16%;
+  right: 20%;
 }
 .white{
   text-shadow: 1px 1px 2px #000;
@@ -199,6 +209,7 @@ h5{
 .updates__text{
   font-size: 20px;
   letter-spacing: 0.09em;
+  width: 100%
 }
 .updates_link{
   float: right;

@@ -81,7 +81,7 @@ h4 {
   padding-top: 9%;
   padding-bottom: 5%;
   border-top: 1px solid #e6e6e6;
-  box-shadow: 19px 20px 20px #000000;
+  /* box-shadow: 19px 20px 20px #000000; */
 }
 .copyright{
   background: url(../img/foter_main.jpg) 50% 0% no-repeat;
@@ -217,7 +217,7 @@ h4 {
   background: url(../img/logo-4.png) 0 0 no-repeat;
 }
 div.logo-5{
-  background: url(../img/logo-5.png) 0 0 no-repeat;
+  background: url(../img/logo-5.png) no-repeat;
 }
 .logo-6{
   background: url(../img/logo-6.png) 0 0 no-repeat;
@@ -548,6 +548,18 @@ div.logo-5{
     position: absolute;
     top: 1%;
     right: 1%;
+  }
+  .partners{
+    max-width: 960px;
+    width: 100%;
+    margin: 2% auto;
+    padding: 2% 0px 2% 5%;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .partners__elemetns{
+    height: 60px;
+    width: 16%;
+    background-position: 5px 1px;
   }
 
 

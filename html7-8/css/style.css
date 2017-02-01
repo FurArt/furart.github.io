@@ -4,12 +4,15 @@
   box-sizing: border-box;
 }
 body{
-  display: flex;
-  flex-wrap: wrap;
 }
-h1, h2, h3, h4, h5, p, h6{
+h1, h2, h3, h4, h5, h6{
   font-family: 'League Gothic', sans-serif;
   word-wrap: break-word;
+}
+p{
+  font-family: 'open sans', sans-serif;
+  word-wrap: break-word;
+  font-size: 16px;
 }
 a{
   font-family: 'League Gothic', sans-serif;
@@ -101,7 +104,6 @@ h6{
   font-size: 16px;
   text-shadow: 1px 1px 3px #000;
   font-family: "Open Sans";
-  margin: 7px 0 0 0;
 }
 .hide_block{
   display: none;
@@ -137,7 +139,7 @@ h6{
 .white__text{
   color: white;
   text-shadow: 1px 1px 1px #0f1518;
-  font-size: 19px;
+  font-size: 14px;
   line-height: 25px;
   letter-spacing: 0.09em;
   margin-bottom: 3%;
@@ -197,6 +199,10 @@ h6{
   margin: 5% 1% 1% 1%;
   width: 93%;
 }
+.wrapper__white__conteiner{
+  position: relative;
+}
+
 .updates__element::before{
   content: '';
   float: left;
@@ -208,9 +214,9 @@ h6{
   margin: 0 18px 0 0;
 }
 .updates__text{
-  font-size: 20px;
-  letter-spacing: 0.09em;
-  width: 100%
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  width: 100%;
 }
 .updates_link{
   float: right;
@@ -236,24 +242,6 @@ li.black__active__buttom_active::after{
 }
 .hide_text{
   display: none;
-}
-.logo-1{
-  background: url(../img/logo-1.jpg) 0 0 no-repeat;
-}
-.logo-2{
-  background: url(../img/logo-2.jpg) 0 0 no-repeat;
-}
-.logo-3{
-  background: url(../img/logo-3.png) 0 0 no-repeat;
-}
-.logo-4{
-  background: url(../img/logo-4.png) 0 0 no-repeat;
-}
-div.logo-5{
-  background: url(../img/logo-5.png) no-repeat;
-}
-.logo-6{
-  background: url(../img/logo-6.png) 0 0 no-repeat;
 }
 .slider__text{
   text-shadow: 1px 1px 3px #000;

@@ -1,0 +1,40 @@
+.top__laer_conteiner{
+  max-width: 960px;
+  margin: 3% auto;
+}
+div {
+  display: block;
+  overflow: auto;
+}
+.logo{
+  float: left;
+  display: inline;
+  width: 100%
+}
+.logO_coteiner{
+  float: left;
+}
+.topbar{
+  float: right;
+  width: 70%;
+}
+.slider{
+  clear: both;
+  float: left;
+}
+.active__menu_bottom{
+  display: none;
+}
+.menu__site__element{
+  width: 16%;
+  float: left;
+}
+.background__grey__slider{
+  margin: 0% auto;
+  padding: 5% 0% 5% 0%;
+  width: 100%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+  background: #000;
+
+
+}

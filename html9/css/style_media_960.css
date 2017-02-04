@@ -3,15 +3,8 @@
     width: 100%;
     height: 846px;
   }
-  .top__laer_conteiner{
-    max-width: 960px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    margin: 0 auto;
-  }
-  .background__grey__slider{
+  .top__laer:after {
+    content: '';
     position: absolute;
     width: 100%;
     height: 400px;
@@ -19,6 +12,16 @@
     background: rgba(0, 0, 0, 0.2);
     z-index: 0;
   }
+  .top__laer_conteiner{
+    max-width: 960px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0 auto;
+  }
+
   .logo{
     margin: 0 auto;
     width: 960px;
@@ -74,6 +77,7 @@
     margin: 25% auto;
     height: auto;
     position: relative;
+    z-index: 1;
   }
   .slider::after{
     content: '';

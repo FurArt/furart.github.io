@@ -1,0 +1,19 @@
+body {
+  width: 100%
+}
+.box {
+  max-width: 800px;
+  width: 100%;
+  margin: 5em auto;
+  background: green;
+  overflow: hidden;
+}
+.link-box{
+text-align: center;
+display: block;
+float: left;
+font: 18px 18px normal sans-serif;
+width: 48%;
+color: #fff;
+text-shadow: 3px 3px 3px #000;
+}

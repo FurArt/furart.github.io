@@ -109,6 +109,16 @@ var boxElement = h3AndDivCheckboxInHtml();
 form[0].appendChild(bodyTag.inputButton());
 var divCheckbox = document.querySelectorAll('.checkbox');
 
+// function labelInHtml(){
+//   for (var i = 0; i < 3; i++) {
+//     divCheckbox[i].appendChild(bodyTag.label());
+//     divCheckbox[i].appendChild(bodyTag.label());
+//     divCheckbox[i].appendChild(bodyTag.label());
+//   };
+// };
+// Когда включена функция выше выдает ошибку: Uncaught TypeError: Cannot read property 'appendChild' of undefined at inputCheckboxInHtml (html-customer.js:133) at html-customer.js:136
+// Вопрос в чем причина и как в будуешм не попадать сюда.
+
 
 divCheckbox[0].appendChild(bodyTag.label());
 divCheckbox[0].appendChild(bodyTag.label());
@@ -119,6 +129,8 @@ divCheckbox[1].appendChild(bodyTag.label());
 divCheckbox[2].appendChild(bodyTag.label());
 divCheckbox[2].appendChild(bodyTag.label());
 divCheckbox[2].appendChild(bodyTag.label());
+
+
 var label = document.getElementsByTagName('label');
 
 function inputCheckboxInHtml() {

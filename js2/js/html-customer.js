@@ -100,9 +100,8 @@ divRow[0].appendChild(bodyTag.h1TextCenter());
 divRow[1].appendChild(bodyTag.form());
 var form = document.querySelectorAll('.form-horizontal');
 function h3AndDivCheckboxInHtml() {
-  for (var i = 0; i < 3; i++) {
-  var a = 1;
-  form[0].appendChild(bodyTag.h3(a++));
+  for (var i = 1; i < 4; i++) {
+  form[0].appendChild(bodyTag.h3(i));
   form[0].appendChild(bodyTag.divCheckbox()); // second block
   }
 };
@@ -110,41 +109,30 @@ var boxElement = h3AndDivCheckboxInHtml();
 form[0].appendChild(bodyTag.inputButton());
 var divCheckbox = document.querySelectorAll('.checkbox');
 
-console.log(divCheckbox);
 
-function h3AndDivCheckboxInHtml() {
-  divCheckbox[0].appendChild(bodyTag.label());
-  divCheckbox[0].appendChild(bodyTag.label());
-  divCheckbox[0].appendChild(bodyTag.label());
-};
-h3AndDivCheckboxInHtml();
-// divCheckbox[0].appendChild(bodyTag.label());
-// divCheckbox[0].appendChild(bodyTag.label());
-// divCheckbox[0].appendChild(bodyTag.label());
-// divCheckbox[1].appendChild(bodyTag.label());
-// divCheckbox[1].appendChild(bodyTag.label());
-// divCheckbox[1].appendChild(bodyTag.label());
-// divCheckbox[2].appendChild(bodyTag.label());
-// divCheckbox[2].appendChild(bodyTag.label());
-// divCheckbox[2].appendChild(bodyTag.label());
+divCheckbox[0].appendChild(bodyTag.label());
+divCheckbox[0].appendChild(bodyTag.label());
+divCheckbox[0].appendChild(bodyTag.label());
+divCheckbox[1].appendChild(bodyTag.label());
+divCheckbox[1].appendChild(bodyTag.label());
+divCheckbox[1].appendChild(bodyTag.label());
+divCheckbox[2].appendChild(bodyTag.label());
+divCheckbox[2].appendChild(bodyTag.label());
+divCheckbox[2].appendChild(bodyTag.label());
 var label = document.getElementsByTagName('label');
-label[0].appendChild(bodyTag.inputCheckbox());
-label[0].appendChild(bodyTag.p(1));
-label[1].appendChild(bodyTag.inputCheckbox());
-label[1].appendChild(bodyTag.p(2));
-label[2].appendChild(bodyTag.inputCheckbox());
-label[2].appendChild(bodyTag.p(3));
-// second block
-label[3].appendChild(bodyTag.inputCheckbox());
-label[3].appendChild(bodyTag.p(1));
-label[4].appendChild(bodyTag.inputCheckbox());
-label[4].appendChild(bodyTag.p(2));
-label[5].appendChild(bodyTag.inputCheckbox());
-label[5].appendChild(bodyTag.p(3));
-// third block
-label[6].appendChild(bodyTag.inputCheckbox());
-label[6].appendChild(bodyTag.p(1));
-label[7].appendChild(bodyTag.inputCheckbox());
-label[7].appendChild(bodyTag.p(2));
-label[8].appendChild(bodyTag.inputCheckbox());
-label[8].appendChild(bodyTag.p(3));
+
+function inputCheckboxInHtml() {
+  for (var i = 0; i <= 8; i++) {
+    label[i].appendChild(bodyTag.inputCheckbox());
+  };
+};
+inputCheckboxInHtml();
+var blockQuestion;
+function appendChildInHtml(blockQuestion) {
+  for (var i = 0; i < 3; i++) {
+    label[+blockQuestion + i].appendChild(bodyTag.p(i+1));
+  };
+};
+appendChildInHtml(0);
+appendChildInHtml(3);
+appendChildInHtml(6);

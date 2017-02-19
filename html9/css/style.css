@@ -3,8 +3,6 @@
   padding: 0px;
   box-sizing: border-box;
 }
-body{
-}
 h1, h2, h3, h4, h5, h6{
   font-family: 'League Gothic', sans-serif;
   word-wrap: break-word;
@@ -21,8 +19,6 @@ a{
   text-decoration: none;
   text-transform: uppercase;
   color: #ffffff;
-  font-style: normal;
-
   }
 ul,
 li{
@@ -60,13 +56,13 @@ h6{
   color: #454545;
   margin-bottom: 10px;
 }
-.top-laer{
+.conteiner{
+  position: absolute;
+  z-index: 1;
+}
+.top-layer{
   background: url(../img/backgroun__top.jpg) 50% 0% no-repeat;
   width: 100%;
-
-}
-.active-menu-bottom{
-  display: none;
 }
 .gradient{
   border-top: solid 1px #000;
@@ -79,24 +75,18 @@ h6{
   width: 100%;
   height: auto;
 }
-.wrapper-white{
+.wrapper__white{
   background: #f9f9f9;
   background-size: 100%;
   width: 100%;
   height: auto;
-  display: -webkit-flex;
-  display: -o-flex;
-  display: -moz-flex;
-  display: -ms-flex; display: flex;
+  display: flex;
   flex-wrap: wrap;
   box-shadow: 1px 1px 1px #000000;
 }
 .partners{
   width: 100%;
-  display: -webkit-flex;
-  display: -o-flex;
-  display: -moz-flex;
-  display: -ms-flex; display: flex;
+  display: flex;
   flex-wrap: wrap;
   margin-top: 21%;
   padding-top: 9%;
@@ -121,10 +111,7 @@ h6{
 }
 .slider-icon{
   position: relative;
-  display: -webkit-flex;
-  display: -o-flex;
-  display: -moz-flex;
-  display: -ms-flex; display: flex;
+  display: flex;
 }
 .slider-icon__element{
   width: 16px;
@@ -134,17 +121,14 @@ h6{
   margin-right: 4%;
   position: relative;
 }
-.slider__link--active::after{
+.active-slider-icon::after{
   content: '';
   width: 10px;
   height: 10px;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   margin-right: 0%;
-  display: -webkit-flex;
-  display: -o-flex;
-  display: -moz-flex;
-  display: -ms-flex; display: flex;
+  display: flex;
   position: absolute;
   top: 20%;
   right: 20%;
@@ -153,7 +137,7 @@ h6{
   text-shadow: 1px 1px 2px #000;
   letter-spacing: 0.06em;
 }
-.white-text{
+.white__text{
   color: white;
   text-shadow: 1px 1px 1px #0f1518;
   font-size: 14px;
@@ -163,11 +147,11 @@ h6{
   font-weight: 100;
   /* text-shadow: 1px 1px 1px #000; */
 }
-.white-link{
+.white_lik{
   float: right;
   font-size: 17px;
 }
-.white-link:hover{
+.white_lik:hover{
   text-shadow: 0px 0px 5px #fff;
 }
 .grey{
@@ -184,7 +168,7 @@ h6{
   letter-spacing: 0.06em;
 }
 
-.mini-slider{
+.mini__slider{
   background: #fff;
   margin-top: 22%;
   margin-left: 14%;
@@ -192,7 +176,7 @@ h6{
   padding: 7% 0 0 11%;
   position: relative;
 }
-.mini-slider::before{
+.mini__slider::before{
   content: '';
   position: absolute;
   height: 50px;
@@ -202,20 +186,21 @@ h6{
   top: 6%;
   z-index: 11;
 }
-.black-text{
+.black__text{
   font-size: 20px;
   letter-spacing: 0.11em;
 }
 .updates {
     margin: 0% 1% 1% 1%;
     padding: 0px 1% 1% 5%;
-    /* display: -webkit-flex; display: -o-flex; display: -moz-flex; display: -ms-flex; display: flex; */
+    /* display: flex; */
     flex-wrap: wrap;
 }
 .updates__element{
+  margin: 5% 1% 1% 1%;
   width: 93%;
 }
-.wrapper-white__conteiner{
+.wrapper__white__conteiner{
   position: relative;
 }
 
@@ -229,24 +214,24 @@ h6{
   background: url(../img/icon_updates.jpg) 0 50% no-repeat;
   margin: 0 18px 0 0;
 }
-.updates-text{
+.updates__text{
   font-size: 14px;
   letter-spacing: 0.05em;
   width: 100%;
 }
-.updates-link{
+.updates_link{
   float: right;
   color: #000;
   margin-top: 20px;
   display: block;
   font-size: 19px;
 }
-.slider-icon__element--black{
+.black__active__buttom{
   background: #fff;
   border: 1px solid #e6e6e6;
   margin: 0 6% 0% 0%;
 }
-li.slider-icon__element--black--active::after{
+li.black__active__buttom_active::after{
   content: '';
   width: 10px;
   height: 10px;
@@ -256,16 +241,16 @@ li.slider-icon__element--black--active::after{
   top: 12%;
   left: 15%;
 }
-.hide-text{
+.hide_text{
   display: none;
 }
 .slider-text{
   text-shadow: 1px 1px 3px #000;
 }
-.hide-about{
+.hide_about{
   display: none;
 }
-.wrapper-gray{
+.wrapper__gray{
   display: none;
 }
 /*and */

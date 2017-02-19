@@ -4,10 +4,6 @@
     <meta charset="utf-8">
     <title>My first, not last responsitive site</title>
     <link rel="stylesheet" href="css/style.css">
-    <!--[if gte IE 8]>
-    <link rel="stylesheet" href="css/style_ie.css">
-  <![endif]-->
-  <!-- https://habrahabr.ru/post/198488/ -->
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="css/style_media_479.css">
     <link rel="stylesheet" href="css/style_media_480.css">
@@ -17,12 +13,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div class="top-laer">
-      <div class="top-laer--conteiner">
+    <div class="top-layer">
+      <div class="conteiner">
       <div class="logo">
-          <img src="img/logo.png" alt="PINGBULLER" class="logo-img">
-      </div>
-        <div class="topbar">
+        <div class="logo-coteiner">
+          <img src="img/logo.png" alt="PINGBULLER" class="logo__img">
+        </div>
+        <nav class="topbar">
           <a href="#" class="active-menu-bottom">home</a>
           <menu class="menu-site active-menu">
             <li class="menu-site__element hover-buttom">
@@ -56,8 +53,8 @@
               </a>
             </li>
           </menu>
-        </div>
-
+        </nav>
+      </div>
       <div class="slider">
           <h1 class="slider-heder">
             Lorem Ipsum Dolor
@@ -72,10 +69,10 @@
             </span>
           </p>
           <ul class="slider-icon">
-            <li class="slider-icon__element"><a  class="slider__link" href="#"></a></li>
-            <li class="slider-icon__element"><a  class="slider__link slider__link--active" href="#"></a></li>
-            <li class="slider-icon__element"><a  class="slider__link" href="#"></a></li>
-            <li class="slider-icon__element"><a  class="slider__link" href="#"></a></li>
+            <li class="slider-icon__element"><a  class="slider-link" href="#"></a></li>
+            <li class="slider-icon__element"><a  class="slider-link active-slider-icon" href="#"></a></li>
+            <li class="slider-icon__element"><a  class="slider-link" href="#"></a></li>
+            <li class="slider-icon__element"><a  class="slider-link" href="#"></a></li>
           </ul>
         </div>
       </div>
@@ -86,19 +83,19 @@
         <h3 class="white">
           ABOUT OUR COMPANY
         </h3>
-        <p class="white-text">
+        <p class="white__text">
             Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus
-          <span class="hide-read__more">
+          <span class="hide__read__more">
             ultrices posuere. Pellentesque vel lacus
             eget nisi convallis auctor. Nam
           </span>
-            <span class="hide-text">
-            <span class="hide-about">
+            <span class="hide_text">
+            <span class="hide_about">
               vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
           </span>
         </span>
         </p>
-        <a href="#" class="white-link">
+        <a href="#" class="white_lik">
           READ MORE
         </a>
       </div>
@@ -106,19 +103,19 @@
         <h3 class="white">
           ABOUT OUR COMPANY
         </h3>
-        <p class="white-text">
+        <p class="white__text">
             Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus
-          <span class="hide-read__more">
+          <span class="hide__read__more">
             ultrices posuere. Pellentesque vel lacus
             eget nisi convallis auctor. Nam
           </span>
-            <span class="hide-text">
-            <span class="hide-about">
+            <span class="hide_text">
+            <span class="hide_about">
               vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
           </span>
         </span>
         </p>
-        <a href="#" class="white-link">
+        <a href="#" class="white_lik">
           READ MORE
         </a>
       </div>
@@ -126,84 +123,84 @@
         <h3 class="white">
           ABOUT OUR COMPANY
         </h3>
-        <p class="white-text">
+        <p class="white__text">
             Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus
-          <span class="hide-read__more">
+          <span class="hide__read__more">
             ultrices posuere. Pellentesque vel lacus
             eget nisi convallis auctor. Nam
           </span>
-            <span class="hide-text">
-            <span class="hide-about">
+            <span class="hide_text">
+            <span class="hide_about">
               vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
           </span>
         </span>
         </p>
-        <a href="#" class="white-link">
+        <a href="#" class="white_lik">
           READ MORE
         </a>
       </div>
     </div>
 
     </div>
-    <div class="wrapper-white">
-      <div class="wrapper-white__conteiner">
-          <div class="mini-slider">
+    <div class="wrapper__white">
+      <div class="wrapper__white__conteiner">
+          <div class="mini__slider">
             <h3 class="grey">
                 PingbulLer
                 <span class="red">
                   starts here
                 </span>
             </h3>
-            <p class="black-text">
+            <p class="black__text">
             “Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae
-            <span class="hide-text--befor-460">
+            <span class="hide__text_befor__460">
               lectus eu libero pellentesque pulvinar
             </span>
-            <span class="hide-text">
+            <span class="hide_text">
              urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”
            </span>
            </p>
          </div>
          <ul class="slider-icon black__active__conteiner">
-           <li class="slider-icon__element slider-icon__element--black"><a  class="slider__link" href="#"></a></li>
-           <li class="slider-icon__element slider-icon__element--black slider-icon__element--black--active"><a  class="slider__link" href="#"></a></li>
-           <li class="slider-icon__element slider-icon__element--black"><a  class="slider__link" href="#"></a></li>
-           <li class="slider-icon__element slider-icon__element--black"><a  class="slider__link" href="#"></a></li>
+           <li class="slider-icon__element black__active__buttom"><a  class="slider-link" href="#"></a></li>
+           <li class="slider-icon__element black__active__buttom black__active__buttom_active"><a  class="slider-link" href="#"></a></li>
+           <li class="slider-icon__element black__active__buttom"><a  class="slider-link" href="#"></a></li>
+           <li class="slider-icon__element black__active__buttom"><a  class="slider-link" href="#"></a></li>
          </ul>
        <div class="updates">
             <h4>
               RECENT UPDATES
             </h4>
           <div class="updates__element">
-          <p class="updates-text">
+          <p class="updates__text">
             <strong>
-            Nunc turpis neque <span class="hide-text show-in-768">feugiat eget</span>
+            Nunc turpis neque <span class="hide_text show__in__768">feugiat eget</span>
             </strong>
           </p>
-          <p class="updates-text">
-              Posted by Admin on March 13 <span class="hide-text--befor-460">2012</span><span class="hide-text">2012 in Recent News</span>
+          <p class="updates__text">
+              Posted by Admin on March 13 <span class="hide__text_befor__460">2012</span><span class="hide_text">2012 in Recent News</span>
           </p>
           </div>
           <div class="updates__element">
-          <p class="updates-text">
+          <p class="updates__text">
             <strong>
-            Nunc turpis neque <span class="hide-text show-in-768">feugiat eget</span>
+            Nunc turpis neque <span class="hide_text show__in__768">feugiat eget</span>
             </strong>
           </p>
-          <p class="updates-text">
-              Posted by Admin on March 13 <span class="hide-text--befor-460">2012</span><span class="hide-text">2012 in Category</span>
+          <p class="updates__text">
+              Posted by Admin on March 13 <span class="hide__text_befor__460">2012</span><span class="hide_text">2012 in Category</span>
           </p>
           </div>
           <div class="updates__element">
-          <p class="updates-text">
+          <p class="updates__text">
             <strong>
-            Nunc turpis neque <span class="hide-text show-in-768">feugiat eget</span>
+            Nunc turpis neque <span class="hide_text show__in__768">feugiat eget</span>
             </strong>
           </p>
-          <p class="updates-text">
-              Posted by Admin on March 13 <span class="hide-text--befor-460">2012</span><span class="hide-text">2012 in Blog Updates</span>
+          <p class="updates__text">
+              Posted by Admin on March 13 <span class="hide__text_befor__460">2012</span><span class="hide_text">2012 in Blog Updates</span>
           </p>
-          <a href="#" class="updates-link"><span class="text-for-befor-960">MORE BLOG POSTS</span><span class="hide-text">READ MORE HERE</span></a>
+          <a href="#" class="updates_link"><span class="text_for__befor__960">MORE BLOG POSTS</span><span class="hide_text">READ MORE HERE</span></a>
           </div>
         </div>
      </div>
@@ -228,10 +225,10 @@
        </div>
      </div>
     </div>
-    <div class="wrapper-gray">
-      <div class="wrapper-gray_container">
-      <div class="comment-categor">
-        <h5>pingbull<span class="gray__heder">er</span>
+    <div class="wrapper__gray">
+      <div class="wrapper__gray_container">
+      <div class="comment__categor">
+        <h5>pingbull<span class="gray__element__heder">er</span>
         </h5>
         <span class="copyright__text__gray">
         Copyright 2013, Pingbull AS
@@ -240,7 +237,7 @@
           Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pul
         </p>
       </div>
-      <div class="comment-categor">
+      <div class="comment__categor">
         <h6>
           RECENT COMMENTS
         </h6>
@@ -248,7 +245,7 @@
           Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis
         </p>
       </div>
-      <div class="comment-categor">
+      <div class="comment__categor">
         <h6>
           NEWS CATEGORIES
         </h6>
@@ -260,26 +257,26 @@
         <h6>NEWS CATEGORIES</h6>
         <p class="gray">
         Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque
-<span class="hide-text">urna risus, mattis pulvinar bibendum</span>
+<span class="hide_text">urna risus, mattis pulvinar bibendum</span>
       </p>
       </div>
       <div class="catefor__footer">
         <h6>NEWS CATEGORIES</h6>
         <p class="gray">
         Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque
-<span class="hide-text">urna risus, mattis pulvinar bibendum</span>
+<span class="hide_text">urna risus, mattis pulvinar bibendum</span>
       </p>
       </div>
       <div class="catefor__footer">
         <h6>NEWS CATEGORIES</h6>
         <p class="gray">
         Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque
-<span class="hide-text">urna risus, mattis pulvinar bibendum</span>
+<span class="hide_text">urna risus, mattis pulvinar bibendum</span>
       </p>
       </div>
     </div>
   </div>
-    <div class="copyright">
+    <footer class="copyright">
       <div class="copyright__conteiner">
         <menu class="menu-site footer__menu">
           <li class="menu-site__element hover-buttom">
@@ -317,7 +314,7 @@
           Designed by <strong>Pingbull AS</strong>
         </p>
       </div>
-    </div>
+    </footer>
   </div>
 <!-- livereload -->
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>

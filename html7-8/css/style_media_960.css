@@ -166,7 +166,7 @@
   }
   .wrapper__white{
     width: 100%;
-    display:;
+    display: flex;
     flex-flow: column;
     position: relative;
   }

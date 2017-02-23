@@ -1,16 +1,28 @@
 var mSecond = 1;
+var ms = 0;
+var timeStart;
+var timeОne;
+// console.log(timeОne.getTime());
 function timer() {
-  for (var i = 0; i > 0; i++) {
-    mSecond++;
-  }
-  console.log(mSecond);
+  timeОne  = new Date()
+  ms = ( timeОne.getTime() - timeStart.getTime())
 };
-
-var programTimer = setInterval(timer, 1);
-console.log(programTimer);
-
-function displayTime(){
-  var a = mSecond % 10;
-  console.log(a);
+// timer()
+console.log(timeОne);
+function saveTime() {
+  timeStart = new Date;
+  timeInterveal();
 };
-displayTime();
+function timeInterveal(){
+  var programTimer = setInterval(timer, 1);
+  return programTimer;
+};
+var searchClocl = document.querySelector('.clock');
+console.log(searchClocl);
+function displayTime() {
+  searchClocl.innerHTML = ms;
+}
+setInterval(displayTime, 10);
+
+var searchStart = document.querySelector('.start');
+searchStart.addEventListener('click', saveTime);

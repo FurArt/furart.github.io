@@ -36,15 +36,12 @@ justify-content: space-between;
   overflow: visible;
 }
 .content{
-  width: 90%;
-  /*position: absolute;
-  top: 5%;
-  left: 3%;*/
+  width: 44%;
   float: left;
   display: none;
   position: absolute;
-  top: 25px;
-  left: 4%;
+  top: 37px;
+  left: 0%;
   text-align: left;
 }
 
@@ -71,6 +68,11 @@ a:focus {
   display: block;
 }
 
+a.active{
+  color: #fff;
+  background: #0000FF
+}
 a.active:hover{
+  color: #fff;
   background: #0000FF
 }

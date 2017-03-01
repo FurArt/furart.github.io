@@ -2,4 +2,41 @@
   width: 75%;
   margin: 0  auto;
   text-align: center;
+  position: relative;
+}
+.form-block{
+position: absolute;
+top: 2%;
+left: 23%;
+height: 120px;
+display: flex;
+flex-flow: column;
+justify-content: space-between;
+}
+.form-help{
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  left: 23%;
+  /*height: 100%;*/
+  line-height: 130%;
+  padding: 1% 2% 1% 1%;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  box-shadow: 0px 0px 3px #000;
+}
+.content{
+  width: 500px;
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  display: none;
+}
+li{
+  list-style-type:none;
+}
+.link-content{
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 3px;
 }

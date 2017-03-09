@@ -87,7 +87,7 @@
     margin: 0 auto;
   }
   .about{
-    margin: 20% auto 0;
+    margin: 6em auto 0;
     width: 83%;
     padding: 0 0 0 17%;
     position: relative;
@@ -98,8 +98,11 @@
   .white__text{
     font-size: 13px;
   }
-  .cloud, .musik{
-    margin: 6% auto 0;
+  .cloud{
+    margin: 3em auto 0;
+  }
+  .musik{
+    margin: 3em auto 6em;
   }
   .mini__slider {
     background: url(../img/bg-w427-h292.png);
@@ -136,7 +139,7 @@
     background: none;
     width: 59%;
     position: absolute;
-    top: 37%;
+    top: 25%;
     left: 27%;
   }
   li.black__active__buttom{

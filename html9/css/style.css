@@ -77,7 +77,6 @@ h6{
   background: linear-gradient(#745083 0%, #322539 100%);
   background-repeat: no-repeat;
   width: 100%;
-  height: auto;
 }
 .wrapper__white{
   background: #f9f9f9;
@@ -157,6 +156,9 @@ h6{
 }
 .white_lik:hover{
   text-shadow: 0px 0px 5px #fff;
+}
+.hover-img{
+  display: none;
 }
 .grey{
   color: #454545;

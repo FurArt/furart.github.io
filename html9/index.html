@@ -3,13 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>My first, not last responsitive site</title>
-    <script
-  src="https://code.jquery.com/jquery-2.2.4.js"
-  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-  crossorigin="anonymous">
-  </script>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.js"></script> -->
   <!--[if IE]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <link rel="stylesheet" href="css/style-ie.css">
 <![endif]-->
     <link rel="stylesheet" href="css/norm.css">
     <link rel="stylesheet" href="css/style.css">
@@ -20,6 +16,16 @@
     <link rel="stylesheet" href="css/style_media_960.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lt IE 8]>
+    <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+    </script>
+    <![endif]-->
   </head>
   <body>
     <div class="top-layer">
@@ -89,6 +95,11 @@
     <div class="gradient">
       <div class="gradient_conteiner">
       <div class="about">
+      <!--[if lt IE 9]>
+        <div class="hover-img-ie">
+          <img src="img/icon_1.png" alt="" class="hover-img">
+        </div>
+      <![endif]-->
         <h3 class="white">
           ABOUT OUR COMPANY
         </h3>
@@ -109,6 +120,11 @@
         </a>
       </div>
       <div class="about cloud">
+        <!--[if lt IE 9]>
+        <div class="hover-img-ie">
+          <img src="img/icon_2.png" alt="" class="hover-img">
+        </div>
+      <![endif]-->
         <h3 class="white">
           ABOUT OUR COMPANY
         </h3>
@@ -129,6 +145,12 @@
         </a>
       </div>
       <div class="about musik">
+        <!--[if lt IE 9]>
+        <div class="hover-img-ie">
+          <img src="img/icon_3.png" alt="" class="hover-img">
+        </div>
+        <![endif]-->
+
         <h3 class="white">
           ABOUT OUR COMPANY
         </h3>
@@ -154,6 +176,11 @@
     <div class="wrapper__white">
       <div class="wrapper__white__conteiner">
           <div class="mini__slider">
+            <!--[if lt IE 9]>
+            <div class="hover-img-ie face_men">
+              <img src="img/face_men.png" alt="" class="hover-img">
+            </div>
+            <![endif]-->
             <h3 class="grey">
                 PingbulLer
                 <span class="red">
@@ -328,5 +355,6 @@
 <!-- livereload -->
     <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
     <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
+
   </body>
 </html>

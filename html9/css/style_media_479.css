@@ -1,10 +1,10 @@
-@media all and (max-width:479px){
+@media all and (max-width:480px){
     .background__grey__slider{
       display: none
     }
     .top-layer{
       height: 517px;
-      display: flex;
+      /*display: flex;*/
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -13,7 +13,7 @@
       width: 100%;
     }
     .logo{
-      display: flex;
+      /*display: flex;*/
       flex-flow: column;
     }
     .logo__img{
@@ -32,6 +32,13 @@
       border-bottom: solid 1px #edbfff;
       margin: 0 auto;
     }
+    .active-menu-bottom:active,
+    .active-menu-bottom:hover,
+    .active-menu-bottom:focus{
+      text-decoration: none;
+    }
+
+
     .active-menu{
       display: none;
       flex-flow: column;
@@ -51,10 +58,7 @@
     a.active-menu-bottom:active+menu.active-menu,
     a.active-menu-bottom:focus+menu.active-menu
     {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      text-align: center;
+      display: block;
     }
     .slider{
       margin-top: 38%;
@@ -68,7 +72,7 @@
       display: none;
     }
   .slider-icon{
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     margin: 22% auto 0;
   }
@@ -82,7 +86,7 @@
   .gradient_conteiner{
     max-width: 320px;
     width: 100%;
-    display: flex;
+    /*display: flex;*/
     flex-flow: column;
     margin: 0 auto;
   }
@@ -112,12 +116,16 @@
     position: relative;
 }
 .grey{
-width: 69%;
-font-size: 24px;
+
+width: 69%;
+
+font-size: 24px;
 }
 .black__text{
-padding: 0% 4% 0% 0%;
-font-size: 14px;
+
+padding: 0% 4% 0% 0%;
+
+font-size: 14px;
 }
   .about::before{
     content: '';
@@ -155,7 +163,7 @@
     background: rgba(0, 0, 0, 0.9);
     border-radius: 11px;
     margin-right: 0%;
-    display: flex;
+    /*display: flex;*/
     position: absolute;
     top: 10%;
     right: 10%;
@@ -163,7 +171,7 @@
   .updates {
     margin: 35% auto 0;
     width: 100%;
-    display: flex;
+    /*display: flex;*/
     flex-wrap: wrap;
 }
 .updates__text{
@@ -171,7 +179,7 @@
 }
 .partners {
     width: 100%;
-    display: flex;
+    /*display: flex;*/
     flex-wrap: wrap;
     margin-top: 27%;
     padding-top: 9%;

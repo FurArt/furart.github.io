@@ -1,8 +1,17 @@
+.container-fluid{
+  padding-top: 50px;
+}
 .row{
   width: 75%;
   margin: 0  auto;
   text-align: center;
   position: relative;
+  overflow-y: visible;
+  min-width: 500px;
+}
+.form-control{
+  max-width: 350px;
+  width:50% ;
 }
 .form-block{
 position: absolute;
@@ -17,7 +26,7 @@ justify-content: space-between;
   display: block;
   box-sizing: border-box;
   position: absolute;
-  left: 27%;
+  left: 330px;
   /*height: 100%;*/
   line-height: 130%;
   padding: 1% 2% 1% 1%;
@@ -25,24 +34,41 @@ justify-content: space-between;
   border-radius: 3px;
   box-shadow: 0px 0px 3px #000;
 }
+
+
+
+.form-inline label{
+  min-width: 150px;
+}
+.form-inline input{
+  max-width: 150px
+}
 .ul-content-box{
   border: 2px solid #ddd;
   border-radius: 3px;
-  /*width:*/
-  height: 360px;
-  overflow: visible;
+  height: avto;
+  /*! overflow: hidden; */
+  background: #eee;
+  float: left;
+  margin-bottom: -2px;
+  /*! position: absolute; */
 }
 .content-box{
   overflow: visible;
 }
 .content{
-  width: 44%;
+  /*! width: 50%; */
   float: left;
   display: none;
-  position: absolute;
-  top: 37px;
-  left: 0%;
+  /*! position: absolute; */
+  /*! top: 72%; */
+  /*! left: 0%; */
   text-align: left;
+  /*! overflow: scroll; */
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  align-content: ;
+  clear: left;
 }
 
 li{

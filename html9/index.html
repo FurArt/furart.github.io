@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>My first, not last responsitive site</title>
     <!-- <script src="https://code.jquery.com/jquery-2.2.4.js"></script> -->
-  <!--[if IE]>
+  <!--[if lt IE 9]>
   <link rel="stylesheet" href="css/style-ie.css">
 <![endif]-->
     <link rel="stylesheet" href="css/norm.css">
@@ -16,16 +16,7 @@
     <link rel="stylesheet" href="css/style_media_960.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--[if IE]>
-    <script>
-      document.createElement('header');
-      document.createElement('nav');
-      document.createElement('section');
-      document.createElement('article');
-      document.createElement('aside');
-      document.createElement('footer');
-    </script>
-    <![endif]-->
+
   </head>
   <body>
     <div class="top-layer">
@@ -34,6 +25,9 @@
         <div class="logo-coteiner">
           <img src="img/logo.png" alt="PINGBULLER" class="logo__img">
         </div>
+        <!--[if IE]>
+        <div class="topbar">
+          <![endif]-->
         <nav class="topbar">
           <a href="#" class="active-menu-bottom">home</a>
           <menu class="menu-site active-menu">
@@ -68,6 +62,9 @@
               </a>
             </li>
           </menu>
+            <!--[if IE]>
+        </div>
+          <![endif]-->
         </nav>
       </div>
       <div class="slider">

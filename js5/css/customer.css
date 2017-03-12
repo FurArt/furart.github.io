@@ -39,13 +39,15 @@ li{
   /*height: 0px;*/
   /*overflow: hidden;*/
   padding-left: 0;
+  z-index: 15;
+  min-width: 130px;
 }
 .top-menu_element>.dropdown-menu{
   left: 0;
   top: 28px;
 }
 .top-menu{}
-.top-menu_element{background: #f09696;}
+.top-menu_element{background: #f09696;min-width: 130px;}
 .link-menu,
 .link-menu:hover,
 .link-menu:active,

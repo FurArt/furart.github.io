@@ -3,27 +3,18 @@
 var $writerText = {};
   $ (function () {
     var $findControl = $('.form-control');
-    var $findButton = $('#show');
-    $findButton.click( function () { // функция на клик
-        if ($(".form-help").hasClass('hidden')) {
-          $writerText.firstname = $("#firstname").attr("title");
-          $writerText.lastname = $("#lastname").attr("title");
-          $writerText.address = $("#address").attr("title");
-          var $find= $('.form-help');
-          console.log($find);
-          $($find[0]).text($writerText.firstname);
-          $($find[1]).text($writerText.lastname);
-          $($find[2]).text($writerText.address);
-
-          $find.fadeTo(500, 1, function () {
-            $(this).removeClass('hidden')})
-        } else {
-          var $find = $('.form-help')
-          .fadeTo(500, 0, function () {
-            $(this).addClass('hidden')
-          })
-        }
-      });
+    var $findButton = $('.button-show');
+    $findButton.on("click", function(event) {
+      event.preventDefault();
+      $("input").each(function() {
+        $writerText.title = $(this).attr("title");
+        $(this).siblings('.form-help')
+        .text($writerText.title)
+        .fadeTo(500, 1, function () {
+          $(this).removeClass('hidden')
+        })
+      })
+    });
     $findControl.mouseenter( function() { // функция наведение мыши
       $writerText.title = $(this).attr("title");
       $(this).removeAttr("title");
@@ -36,8 +27,8 @@ var $writerText = {};
     });
 
     $findControl.mouseout( function() {
-      var $find = $(this).siblings('.form-help').fadeTo(500, 0, function () {
-        $(this).addClass('hidden')
+      var $find = $(this).attr('title', $writerText.title).siblings('.form-help').fadeTo(500, 0, function () {
+        $(this).addClass('hidden');
       })
     });
   });

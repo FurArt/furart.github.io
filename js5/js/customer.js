@@ -40,6 +40,7 @@ $(function() {
   var $linkMenu = $(".dropdown-menu_js");
 $linkMenu.hover(function () {
   $(this).children("ul")
+  .stop(true)
   .css("display","block")
   .animate({
     height:"100%",

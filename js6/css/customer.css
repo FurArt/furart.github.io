@@ -1,8 +1,10 @@
 /*carusel*/
+
+/*Параметры плагина:
+1. количество иконок
+2. ширина фото
+*/
 .fcarousel-wrapper{
-  /* clear: both; */
-  /* float: left; */
-  /* overflow: hidden; */
   width: 560px;
   margin: 0 auto;
   left: 10px;
@@ -10,14 +12,12 @@
 .fcarousel{
   position: relative;
   width: 560px;
-  height: auto;
+  height: 123px;
   overflow: hidden;
   z-index: 2;
-  /* left: 50%; */
-  /* margin-left: -280px; */
-  height: 212px;
 }
 .fcarousel-list{
+  padding: 0 0 0 0;
   width: 744px;
   overflow: hidden;
   -webkit-padding-start: 0;
@@ -27,9 +27,7 @@
 }
 .fcarousel-element{
   float: left;
-  padding: 0 5px 0 5px;
-  /*width: 176px;*/
-  /*text-decoration: */
+  padding: 5px 5px 5px 5px;
   display: block;
 }
 .fcarousel-img{

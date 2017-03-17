@@ -1,0 +1,27 @@
+body {
+background-color: #f0f0f0;
+width: 100%;
+}
+.box {
+  width: 502px;
+  margin: auto;
+}
+.boximg{
+  width: 100%;
+  margin: auto;
+  /*padding-bottom: 0px;*/
+  text-align: center;
+}
+
+.story{
+  padding-top: 50px;
+}
+ul{
+  -webkit-padding-start: 0px;
+}
+.resume-img{
+  width: 200px;
+}
+.header-text{
+  text-transform: uppercase;
+}

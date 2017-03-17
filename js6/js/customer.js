@@ -35,22 +35,35 @@ var $varTest = {};
       this.find(".fcarousel-control-prev").on("click", function() {
         if (settings.positionCaunt != settings.minimuSet) {
           settings.positionCaunt = settings.positionCaunt + 10 + settings.imgWidth;
-          elementFC.parents('.fcarousel-list').animate({"left":settings.positionCaunt+'px'})
+          elementFC.parents('.fcarousel-list').animate({"left":settings.positionCaunt+'px'});
         }
       })
 
       this.find(".fcarousel-control-next").on("click", function() {
         if (( - settings.positionCaunt) != settings.maksimumSet) {
-          console.log( 'settings.maksimumSet:', settings.maksimumSet);
-          console.log('settings.positionCaunt:', settings.positionCaunt);
           settings.positionCaunt = settings.positionCaunt - settings.imgWidth - 10;
-          elementFC.parents('.fcarousel-list').animate({"left":settings.positionCaunt+'px'})
+          elementFC.parents('.fcarousel-list').animate({"left":settings.positionCaunt+'px'});
         }
       })
     return this
   };
 })( jQuery );
-$( function() {
 
-  $('.fcarousel-wrapper').fCurusel()
+
+
+
+$( function() {
+  $('.fcarousel-wrapper').fCurusel(
+    {'qauntImgShow' : 3,}
+  );
+  var html = $('#resume').html();
+  var base = [
+  {
+    name:"ФУРГАС АРТЕМ ВАСИЛЬОВИЧ",
+    imgFolow:"img/me.jpg"
+  },
+  ];
+  var content = tmpl(html, {data:base});
+  $($('.row')[1]).append(content);
+  console.log({data:base});
 });

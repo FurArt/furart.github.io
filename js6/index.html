@@ -40,44 +40,38 @@
 
       <div class="row">
         <script type="text/template" id="resume">
-
-        <div class="box" >
+         <div class="box" >
           <h1 class="header-text">
-            <%= data.name %>
+            <%=htmlTag[0].name%>
           </h1>
           <div class="boximg">
-            <img src="img/me.jpg" alt="name" class="resume-img">
+            <img src="<%=htmlTag[0].fotoProfile%>" alt="<%=htmlTag[0].name%>" class="resume-img">
           </div>
           <p>
-            Менеджер с продаж автомобилей, маркетолог, администратор сайта.
+            <%=htmlTag[0].expirence%>
           </p>
           <h2>
-            Хочу учить фронтенд, потому что:
+              <%=htmlTag[1].forWhat%>
           </h2>
           <ul>
-            <li>
-              Детская мечта
-            </li>
-            <li>
-              Мне это интересней
-            </li>
-            <li>
-              Потенциально тут возможно заработать больше
-            </li>
+            <% for (var i = 0; i < htmlTag[1].dream.length; i++) {%>
+              <li>
+              <%=htmlTag[1].dream[i].why%>
+              </li>
+            <%};%>
           </ul>
-                <h2>Мой контактный телефон:
-                </h2>
-                  <p>+380990242922
-                  <h2>Мой профиль Вконтакте:
-                  </h2>
-                  <a href="https://www.facebook.com/iiionerart" target="_blank">Артем Фургас
-                  </a>
-                  <hr>
-                  <h2> Мой фидбек:
-                  </h2>
-                  <p>
-                    C нетерпением жду следующих модулей
-                  </p>
+          <%for (var i = 0; i < dataHTML.htmlTag[2].contacts.length; i++) {%>
+          <h2>
+            <%=
+              dataHTML.htmlTag[2].contacts[i].header
+            %>
+          </h2>
+          <p>
+            <%=
+              dataHTML.htmlTag[2].contacts[i].info
+            %>
+          </p>
+          <%};%>
         </div>
       </script>
 

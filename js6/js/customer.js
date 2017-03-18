@@ -6,10 +6,10 @@ var $varTest = {};
 
     // Создаём настройки по-умолчанию, расширяя их с помощью параметров, которые были переданы
     var settings = $.extend( {
-      'imgWidth'  : 175,
-      'qauntImg'  : 0, // общее количество фото галереи
+      'imgWidth'  : 175, // ширина 1 фото
+      'qauntImg'  : 0,
       'listWidth' : 0,
-      'qauntImgShow' : 3,
+      'qauntImgShow' : 3,// количество фото галереи отображаемыъ
       'fcarouselWidth' : 0,
       'minimuSet': 0,
       'maksimumSet': 0,
@@ -54,16 +54,9 @@ var $varTest = {};
 
 $( function() {
   $('.fcarousel-wrapper').fCurusel(
-    {'qauntImgShow' : 3,}
+    {
+    'qauntImgShow' : 3,
+    'imgWidth'  : 200
+}
   );
-  var html = $('#resume').html();
-  var base = [
-  {
-    name:"ФУРГАС АРТЕМ ВАСИЛЬОВИЧ",
-    imgFolow:"img/me.jpg"
-  },
-  ];
-  var content = tmpl(html, {data:base});
-  $($('.row')[1]).append(content);
-  console.log({data:base});
 });

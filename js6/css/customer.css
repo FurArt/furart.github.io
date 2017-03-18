@@ -1,20 +1,22 @@
 /*carusel*/
 
-/*Параметры плагина:
-1. количество иконок
-2. ширина фото
+/*ÐŸÐ°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ñ‹ Ð¿Ð»Ð°Ð³Ð¸Ð½Ð°:
+1. ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¸ÐºÐ¾Ð½Ð¾Ðº
+2. ÑˆÐ¸Ñ€Ð¸Ð½Ð° Ñ„Ð¾Ñ‚Ð¾
 */
 .fcarousel-wrapper{
-  width: 560px;
+  width: auto;
   margin: 0 auto;
   left: 10px;
+  overflow: hidden;
 }
 .fcarousel{
   position: relative;
   width: 560px;
-  height: 123px;
+  /* height: 123px; */
   overflow: hidden;
   z-index: 2;
+  margin: auto;
 }
 .fcarousel-list{
   padding: 0 0 0 0;

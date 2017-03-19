@@ -1,0 +1,7 @@
+.row {
+  width: 50%;
+  margin: 0 auto;
+}
+[type="radio"]{
+  float: left;
+}

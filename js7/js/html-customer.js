@@ -63,6 +63,7 @@ var cssClassFile = {
     return tagElement;
   },
 };
+
 var bodyTag = {
   divContainerFluid: function creatTagElement() {
     var tagElement = document.createElement('div');
@@ -117,7 +118,7 @@ var bodyTag = {
   },
   inputButton: function creatTagElement() {
     var tagElement = document.createElement('input');
-    tagElement.setAttribute ( 'type', 'button' );
+    tagElement.setAttribute ( 'type', 'submit' );
     tagElement.classList.add ( 'button' );
     tagElement.classList.add ('col-xs-6');
     tagElement.classList.add ('center-block');
@@ -133,6 +134,7 @@ var bodyTag = {
     return tagElement;
   },
 };
+var customerAnswer = {};
 var header = document.getElementsByTagName('head');
 var body = document.getElementsByTagName('body');
 // add element in html
@@ -167,8 +169,27 @@ function customerJQ() {
         };
       };
       $("form").append(bodyTag.inputButton)
+      $(".button ").on('click', function(e) {
+      e.preventDefault();
+      for (var i = 1; i < (workDataTest.length); i++) {
+        var inputName = 'qustion-' + i;
+        customerAnswer[i] = ($('input[name='+ inputName +']:checked').val());
+      };
+      for (var i = 1; i < workDataTest.length; i++) {
+        if (customerAnswer[i] === false) {
+          alert("Чтото не верно");
+        } else {
+          alert('все ок')
+        }
+      }
 
-  })
+    }
+    );
+  }
+);
+
+
+
 };
 
 // divRow[1].appendChild(bodyTag.form());

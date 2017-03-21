@@ -135,6 +135,7 @@ var bodyTag = {
   },
 };
 var customerAnswer = {};
+var allDoneAnswer = 0;
 var header = document.getElementsByTagName('head');
 var body = document.getElementsByTagName('body');
 // add element in html
@@ -168,18 +169,32 @@ function customerJQ() {
         for (var e = 0; e < 1; e++) {
         };
       };
-      $("form").append(bodyTag.inputButton)
+      $("form").append(bodyTag.inputButton);
+
       $(".button ").on('click', function(e) {
       e.preventDefault();
+
       for (var i = 1; i < (workDataTest.length); i++) {
         var inputName = 'qustion-' + i;
         customerAnswer[i] = ($('input[name='+ inputName +']:checked').val());
       };
-      for (var i = 1; i < workDataTest.length; i++) {
-        if (customerAnswer[i] === false) {
-          alert("Чтото не верно");
+var dataLength = workDataTest.length;
+
+      for (var i = ((dataLength) - 1); i > 0; i--) {
+        // console.log(customerAnswer);
+        // console.log(!(customerAnswer[i]));
+
+
+// (typeof customerAnswer[i] == "undefined" ) &&
+        if ( ( typeof customerAnswer[i] === "undefined" ) || (customerAnswer[i] === 'false') ) {
+          // console.log("false");
+          console.log(customerAnswer[i]);
+          break;
         } else {
-          alert('все ок')
+          console.log(customerAnswer[i]);
+
+          // allDoneAnswer++;
+          // console.log("true");
         }
       }
 
@@ -191,42 +206,3 @@ function customerJQ() {
 
 
 };
-
-// divRow[1].appendChild(bodyTag.form());
-// var form = document.querySelectorAll('.form-horizontal');
-// function h3AndDivCheckboxInHtml() {
-//   for (var i = 1; i < (workDataTest.length - 1) ; i++) {
-//   form[0].appendChild(bodyTag.h3(i));
-//   form[0].appendChild(bodyTag.divCheckbox()); // second block
-//   }
-// };
-// var boxElement = h3AndDivCheckboxInHtml();
-// form[0].appendChild(bodyTag.inputButton());
-// var divCheckbox = document.querySelectorAll('.checkbox')
-// function labelInHtml(){
-//   for (var i = 0; i < 3; i++) {
-//     divCheckbox[i].appendChild(bodyTag.label());
-//     divCheckbox[i].appendChild(bodyTag.label());
-//     divCheckbox[i].appendChild(bodyTag.label());
-//   };
-// };
-// labelInHtml();
-// // Когда включена функция выше выдает ошибку: Uncaught TypeError: Cannot read property 'appendChild' of undefined at inputCheckboxInHtml (html-customer.js:133) at html-customer.js:136
-// // Вопрос в чем причина и как в будуешм не попадать сюда.
-// var label = document.getElementsByTagName('label');
-//
-// function inputCheckboxInHtml() {
-//   for (var i = 0; i <= 8; i++) {
-//     label[i].appendChild(bodyTag.inputCheckbox());
-//   };
-// };
-// inputCheckboxInHtml();
-// var blockQuestion;
-// function appendChildInHtml(blockQuestion) {
-//   for (var i = 0; i < 3; i++) {
-//     label[+blockQuestion + i].appendChild(bodyTag.p(i+1));
-//   };
-// };
-// appendChildInHtml(0);
-// appendChildInHtml(3);
-// appendChildInHtml(6);

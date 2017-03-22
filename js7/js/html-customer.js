@@ -1,9 +1,8 @@
+
+// var workDataTest;
 //зачистка
-function claer() {
-  localStorage.clear();
-}
-claer();
-//То на что мы можем влиять:)
+
+var workDataTest;
 var dataTest =[
     {
       testName: 'Тест который можна написть сдесь'
@@ -29,13 +28,23 @@ var dataTest =[
       answer: [['какаята',false], ['фиолетовая',false], ['чёрноя',false],['синия',true],],
     },
   ];
+  var strDataTest = JSON.stringify(dataTest);
 
-//
-var strDataTest = JSON.stringify(dataTest);
-localStorage.setItem('storageDataTest', strDataTest);
-var workDataTest = JSON.parse(localStorage.storageDataTest);
-console.log(workDataTest);
-//add css link in head
+  try {
+    workDataTest = JSON.parse(localStorage.storageDataTest)
+    if (strDataTest == localStorage.storageDataTest ) {
+    } else {
+      localStorage.setItem('storageDataTest', strDataTest);
+    };
+    console.log('try');
+  } catch (e) {
+    localStorage.setItem('storageDataTest', strDataTest);
+    workDataTest = JSON.parse(localStorage.storageDataTest);
+    console.log("catch-cahnge");
+  }
+  console.log(workDataTest);
+//То на что мы можем влиять:)
+
 var cssClassFile = {
   bootstrap: function creatTagElement() {
     var tagElement = document.createElement('link');
@@ -133,7 +142,17 @@ var bodyTag = {
     tagElement.innerHTML = (workDataTest[b].answer[a][0]);
     return tagElement;
   },
+  fModal: function creatTagElement() {
+    var tagElement = document.createElement('div');
+    tagElement.classList.add ( 'f-modal' );
+    tagElement.setAttribute ( 'role', 'dialog' );
+
+    return tagElement;
+  },
 };
+
+//add css link in head
+
 var customerAnswer = {};
 var allDoneAnswer = 0;
 var header = document.getElementsByTagName('head');
@@ -146,15 +165,42 @@ header[0].appendChild(cssClassFile.customer());
 header[0].appendChild(cssClassFile.Jquery());
 window.addEventListener("load",customerJQ);
 function customerJQ() {
+// modal start
+  (function( $ ){
+    $.fn.fModal = function(options) {
+
+      var settings = $.extend( {
+        'titleFModul'  : 'Укажите здесь заголовок', // title
+        'contentFModul' : 'Укажите необходимый текст', // content
+        'widthFModulWidth' : 300 + 'px',
+        'heightFModulWidth' : 100 + 'px'
+      }, options);
+
+  var titleFModul = '';
+  var fModal = this;
+      this.html("<div class='f-modal-dialog'><div class='f-modal-header'><h4 class='f-modal-header-text'>"+settings.titleFModul+"</h4></div><div class='f-modal-body'><p class='f-modal-content'>"+settings.contentFModul+"</p></div><div class='f-modal-footer'><button type='button' class='button f-modal-button-prev'>Закрыть</button></div></div>")
+      this.find(".f-modal-button-prev").on('click', function() {
+        fModal.remove();
+      })
+      $('.f-modal-dialog').css({
+        'width' :settings.widthFModulWidth,
+        'height' :settings.heightFModulWidth
+
+      })
+      return this
+    };
+  }( jQuery )); // modal end
+
+
   $(function() {
-    $("body").append(bodyTag.divContainerFluid())
-              .children()
-              .append(bodyTag.divRow())
-              .children()
-              .append(bodyTag.h1TextCenter())
-              .end()
-              .append(bodyTag.divRow());
-    $($(".row")[1]).append(bodyTag.form())
+    // $("body").append(bodyTag.fModal());// modal window
+
+
+    $("body").append(bodyTag.divContainerFluid());
+
+    $(".container-fluid").append(bodyTag.divRow(), bodyTag.divRow());
+    $($(".row")[0]).append(bodyTag.h1TextCenter());
+    $($(".row")[1]).append(bodyTag.form());
     // $($(".row")[1]).append(bodyTag.form());
     for (var i = 2; i <= (workDataTest.length); i++) {
         $("form").append(
@@ -178,28 +224,35 @@ function customerJQ() {
         var inputName = 'qustion-' + i;
         customerAnswer[i] = ($('input[name='+ inputName +']:checked').val());
       };
-var dataLength = workDataTest.length;
+      var dataLength = workDataTest.length;
 
       for (var i = ((dataLength) - 1); i > 0; i--) {
-        // console.log(customerAnswer);
-        // console.log(!(customerAnswer[i]));
-
-
-// (typeof customerAnswer[i] == "undefined" ) &&
         if ( ( typeof customerAnswer[i] === "undefined" ) || (customerAnswer[i] === 'false') ) {
-          // console.log("false");
-          console.log(customerAnswer[i]);
+          customerAnswer.answer = 'Вы ответили не верно, или оставили не заполненый ответ.';
+            $('body').append("<div class='f-modal fade' role='dialog'></div>")
+            $('.f-modal').fModal({
+              'titleFModul' : 'Результат:',
+              'contentFModul' : customerAnswer.answer,
+              'widthFModulWidth' : 'auto',
+            });
+
           break;
         } else {
-          console.log(customerAnswer[i]);
-
-          // allDoneAnswer++;
-          // console.log("true");
-        }
+          customerAnswer.answer = 'Вы ответили верно.';
       }
+      };
+      if (customerAnswer.answer === 'Вы ответили верно.') {
+        $('body').append("<div class='f-modal fade' role='dialog'></div>")
+        $('.f-modal').fModal({
+          'titleFModul' : 'Результат:',
+          'contentFModul' : customerAnswer.answer,
+        });
+      };
 
-    }
-    );
+      $('input:checked').attr( 'checked', false );
+
+
+    });
   }
 );
 

@@ -2,6 +2,8 @@
 // var workDataTest;
 //зачистка
 
+'use strict'
+
 var workDataTest;
 var dataTest =[
       {
@@ -27,6 +29,17 @@ var dataTest =[
         qustion: 'Каким цветом синея слива?',
         answer: [['какаята',false], ['фиолетовая',false], ['чёрноя',false],['синия',true],],
       },
+      {
+        qustion: 'Каким цветом синея слива?',
+        answer: [['какаята',false], ['фиолетовая',false], ['чёрноя',false],['синия',true],],
+      },
+      {
+        qustion: 'Каким цветом синея слива?',
+        answer: [['какаята',false], ['фиолетовая',false], ['чёрноя',false],['синия',true],],
+      },  {
+          qustion: 'Каким цветом синея слива?',
+          answer: [['какаята',false], ['фиолетовая',false], ['чёрноя',false],['синия',true],],
+        },
 
   ];
   var strDataTest = JSON.stringify(dataTest);
@@ -154,7 +167,9 @@ var bodyTag = {
 
 //add css link in head
 
-var customerAnswer = {};
+var customerAnswer = {
+  answerQaunt: 0,
+};
 var allDoneAnswer = 0;
 var header = document.getElementsByTagName('head');
 var body = document.getElementsByTagName('body');
@@ -228,8 +243,8 @@ function customerJQ() {
       var dataLength = workDataTest.length;
 
       for (var i = ((dataLength) - 1); i > 0; i--) {
-        if ( ( typeof customerAnswer[i] === "undefined" ) || (customerAnswer[i] === 'false') ) {
-          customerAnswer.answer = 'Вы ответили не верно, или оставили не заполненый ответ.';
+        if ( ( typeof customerAnswer[i] === "undefined" )) {
+          customerAnswer.answer = 'Ответье на все вопросы';
             $('body').append("<div class='f-modal fade' role='dialog'></div>")
             $('.f-modal').fModal({
               'titleFModul' : 'Результат:',
@@ -238,16 +253,20 @@ function customerJQ() {
             });
 
           break;
+        } else if ((customerAnswer[i] === 'false')) {
+
         } else {
-          customerAnswer.answer = 'Вы ответили верно.';
+        customerAnswer.answerQaunt++
+        customerAnswer.answer = 'Ваш результат:';
       }
       };
-      if (customerAnswer.answer === 'Вы ответили верно.') {
+      if (customerAnswer.answer === 'Ваш результат:') {
         $('body').append("<div class='f-modal fade' role='dialog'></div>")
         $('.f-modal').fModal({
           'titleFModul' : 'Результат:',
-          'contentFModul' : customerAnswer.answer,
+          'contentFModul' : customerAnswer.answer +' '+ ( customerAnswer.answerQaunt / ( dataLength - 1 ) * 100 ) + '%',
         });
+        customerAnswer.answerQaunt = 0;
       };
 
       $('input:checked').attr( 'checked', false );

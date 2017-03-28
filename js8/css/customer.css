@@ -89,3 +89,7 @@ color: #000000;
     float: left;
     max-width: 300px;
   }
+
+  #test-add{
+    float: none;
+  }

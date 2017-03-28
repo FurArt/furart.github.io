@@ -11,34 +11,34 @@ var dataTest =[
       },
       {
         qustion: 'Каким цветом яблоко?',
-        answer: [['зеленое',1], ['фиолетовые',0], ['чёрное',0],['синие',0],],
+        answer: [['зеленое',true], ['фиолетовые',false], ['чёрное',false],['синие',false],],
       },
       {
         qustion: 'Каким цветом нога?',
-        answer: [['красное',0], ['фиолетовые',0], ['цвет кожи',1],['синие',0],],
+        answer: [['красное',false], ['фиолетовые',false], ['цвет кожи',true],['синие',false],],
       },
       {
         qustion: 'Каким цветом рука?',
-        answer: [['желтое',0], ['цвет кожи',1], ['чёрное',0],['синие',0],],
+        answer: [['желтое',false], ['цвет кожи',true], ['чёрное',false],['синие',false],],
       },
       {
         qustion: 'Каким цветом листья дерева?',
-        answer: [['бирюзовое',1], ['фиолетовые',0], ['чёрное',0],['синие',0],],
+        answer: [['бирюзовое',true], ['фиолетовые',false], ['чёрное',false],['синие',false],],
       },
       {
         qustion: 'Каким цветом синея слива?',
-        answer: [['какаята',0], ['фиолетовая',0], ['чёрноя',0],['синия',1],],
+        answer: [['какаята',false], ['фиолетовая',false], ['чёрноя',false],['синия',true],],
       },
       {
         qustion: 'Каким цветом синея слива?',
-        answer: [['какаята',0], ['фиолетовая',0], ['чёрноя',0],['синия',1],],
+        answer: [['какаята',false], ['фиолетовая',false], ['чёрноя',false],['синия',true],],
       },
       {
         qustion: 'Каким цветом синея слива?',
-        answer: [['какаята',0], ['фиолетовая',0], ['чёрноя',0],['синия',1],],
+        answer: [['какаята',false], ['фиолетовая',false], ['чёрноя',false],['синия',true],],
       },  {
           qustion: 'Каким цветом синея слива?',
-          answer: [['какаята',1], ['фиолетовая',0], ['чёрноя',0],['синия',1],],
+          answer: [['какаята',false], ['фиолетовая',false], ['чёрноя',false],['синия',true],],
         },
 
   ];
@@ -133,7 +133,7 @@ var bodyTag = {
   },
   inputCheckbox: function creatTagElement(a,b) {
     var tagElement = document.createElement('input');
-    tagElement.setAttribute ( 'type', 'checkbox' );
+    tagElement.setAttribute ( 'type', 'radio' );
     tagElement.setAttribute ( 'name', 'qustion-'+ b );
     tagElement.setAttribute ( 'value', workDataTest[b].answer[a][1] );
 
@@ -233,8 +233,6 @@ function customerJQ() {
       };
       $("form").append(bodyTag.inputButton);
 
-
-
       $(".button ").on('click', function(e) {
       e.preventDefault();
 
@@ -255,7 +253,7 @@ function customerJQ() {
             });
 
           break;
-        } else if ((customerAnswer[i] === '0')) {
+        } else if ((customerAnswer[i] === 'false')) {
 
         } else {
         customerAnswer.answerQaunt++

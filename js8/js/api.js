@@ -48,7 +48,7 @@ $(function() {
       if (e.type === 'click') {
         weatherDate.city = $('.form-control').val();
         $.ajax({
-          url:'//api.openweathermap.org/data/2.5/weather?q='+weatherDate.city+'&units=metric&callback=weatherDate.ajaxDate&APPID=700de4cce14ba749fb91a374470c4734',
+          url:'http://api.openweathermap.org/data/2.5/weather?q='+weatherDate.city+'&units=metric&callback=weatherDate.ajaxDate&APPID=700de4cce14ba749fb91a374470c4734',
           dataType: 'jsonp',
         });
       }

@@ -4,46 +4,46 @@
 
 'use strict'
 
-var workDataTest;
+var workDataTest = {};
 var dataTest =[
       {
-        testName: 'Тест который можно написать здесь'
+        testName: 'Тест'
       },
       {
         qustion: 'Каким цветом яблоко?',
-        answer: [['зеленое',1], ['фиолетовые',0], ['чёрное',0],['синие',0],],
+        answer: [['зеленое',true], ['фиолетовые',false], ['чёрное',false],['синие',false],],
       },
       {
         qustion: 'Каким цветом нога?',
-        answer: [['красное',0], ['фиолетовые',0], ['цвет кожи',1],['синие',0],],
+        answer: [['красное',false], ['фиолетовые',false], ['цвет кожи',true],['синие',false],],
       },
       {
         qustion: 'Каким цветом рука?',
-        answer: [['желтое',0], ['цвет кожи',1], ['чёрное',0],['синие',0],],
+        answer: [['желтое',false], ['цвет кожи',true], ['чёрное',false],['синие',false],],
       },
       {
         qustion: 'Каким цветом листья дерева?',
-        answer: [['бирюзовое',1], ['фиолетовые',0], ['чёрное',0],['синие',0],],
+        answer: [['бирюзовое',true], ['фиолетовые',false], ['чёрное',false],['синие',false],],
       },
       {
         qustion: 'Каким цветом синея слива?',
-        answer: [['какаята',0], ['фиолетовая',0], ['чёрноя',0],['синия',1],],
+        answer: [['какаята',false], ['фиолетовая',false], ['чёрноя',false],['синия',true],],
       },
       {
         qustion: 'Каким цветом синея слива?',
-        answer: [['какаята',0], ['фиолетовая',0], ['чёрноя',0],['синия',1],],
+        answer: [['какаята',false], ['фиолетовая',false], ['чёрноя',false],['синия',true],],
       },
       {
         qustion: 'Каким цветом синея слива?',
-        answer: [['какаята',0], ['фиолетовая',0], ['чёрноя',0],['синия',1],],
-      },  {
-          qustion: 'Каким цветом синея слива?',
-          answer: [['какаята',1], ['фиолетовая',0], ['чёрноя',0],['синия',1],],
-        },
-
+        answer: [['какаята',false], ['фиолетовая',false], ['чёрноя',false],['синия',true],],
+      },
+      {
+        qustion: 'Каким цветом синея слива?',
+        answer: [['какаята',false], ['фиолетовая',false], ['чёрноя',false],['синия',true],],
+      },
   ];
+function dataload() {
   var strDataTest = JSON.stringify(dataTest);
-
   try {
     workDataTest = JSON.parse(localStorage.storageDataTest)
     if (strDataTest == localStorage.storageDataTest ) {
@@ -56,8 +56,10 @@ var dataTest =[
     workDataTest = JSON.parse(localStorage.storageDataTest);
     console.log("catch-cahnge");
   }
-  console.log(workDataTest);
-//То на что мы можем влиять:)
+};
+dataload();
+var customerTest = {}
+customerTest.__proto__ = workDataTest[1];
 
 var cssClassFile = {
   bootstrap: function creatTagElement() {
@@ -133,7 +135,7 @@ var bodyTag = {
   },
   inputCheckbox: function creatTagElement(a,b) {
     var tagElement = document.createElement('input');
-    tagElement.setAttribute ( 'type', 'checkbox' );
+    tagElement.setAttribute ( 'type', 'radio' );
     tagElement.setAttribute ( 'name', 'qustion-'+ b );
     tagElement.setAttribute ( 'value', workDataTest[b].answer[a][1] );
 
@@ -175,7 +177,6 @@ var header = document.getElementsByTagName('head');
 var body = document.getElementsByTagName('body');
 // add element in html
 header[0].appendChild(cssClassFile.bootstrap());
-console.log(header);
 header[0].appendChild(cssClassFile.bootstrapTheme());
 header[0].appendChild(cssClassFile.customer());
 header[0].appendChild(cssClassFile.Jquery());
@@ -215,25 +216,26 @@ function customerJQ() {
     $("body").append(bodyTag.divContainerFluid());
 
     $(".container-fluid").append(bodyTag.divRow(), bodyTag.divRow());
-    $($(".row")[1]).append(bodyTag.h1TextCenter());
-    $($(".row")[2]).append(bodyTag.form());
+    $($(".row")[2]).append(bodyTag.h1TextCenter());
+    $($(".row")[3]).append(bodyTag.form());
     // $($(".row")[1]).append(bodyTag.form());
-    for (var i = 2; i <= (workDataTest.length); i++) {
-        $("form").append(
-          bodyTag.h3(i),
-          bodyTag.divCheckbox(i)
-        )
-        var b = i - 1;
-        for (var e = 0; e < workDataTest[b].answer.length; e++) {
-          $('.checkbox-conteiner-'+i).append(bodyTag.label(e));
-          $('.checkbox-conteiner-'+i).children('.checkbox-element-' + e).append(bodyTag.inputCheckbox(e,b), bodyTag.p(e,b));
-        };
-        for (var e = 0; e < 1; e++) {
+    function $addHtml() {
+      for (var i = 2; i <= (workDataTest.length); i++) {
+          $("form").append(
+            bodyTag.h3(i),
+            bodyTag.divCheckbox(i)
+          )
+          var b = i - 1;
+          for (var e = 0; e < workDataTest[b].answer.length; e++) {
+            $('.checkbox-conteiner-'+i).append(bodyTag.label(e));
+            $('.checkbox-conteiner-'+i).children('.checkbox-element-' + e).append(bodyTag.inputCheckbox(e,b), bodyTag.p(e,b));
+          };
+
         };
       };
+      $addHtml();
+
       $("form").append(bodyTag.inputButton);
-
-
 
       $(".button ").on('click', function(e) {
       e.preventDefault();
@@ -255,7 +257,7 @@ function customerJQ() {
             });
 
           break;
-        } else if ((customerAnswer[i] === '0')) {
+        } else if ((customerAnswer[i] === 'false')) {
 
         } else {
         customerAnswer.answerQaunt++
@@ -274,10 +276,33 @@ function customerJQ() {
       $('input:checked').attr( 'checked', false );
 
 
+    });// end click test
+
+    $('#test-add').on('click', function(){ // непонятнок ТЗ что полчутся хз:)
+
+      var $btnAddTestQst = $(this).parents('.input-group-btn').siblings('input#test-add-qustion');
+      var $inputAddFalAns = $(this).parents('.input-group-btn').siblings('input.false-answer');
+      var $inputAddTryAns = $(this).parents('.input-group-btn').siblings('input.try-answer');
+      customerTest.qustion =  $btnAddTestQst.val();
+      var answerCustomDate = [];
+      for (var i = 0; i < $inputAddFalAns.length; i++) {
+        answerCustomDate.splice(i, 1, [$($inputAddFalAns[i]).val(), false]);
+      };
+      answerCustomDate.splice(4, 1, [$inputAddTryAns.val(), true]);
+      customerTest.answer = answerCustomDate;
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      };
+      var dataTestLength = getRandomInt(8, dataTest.length);
+      console.log(
+        dataTestLength
+      );
+      dataTest.splice(dataTest.length+1, 0, customerTest);
+      dataload();
+      console.log(workDataTest[dataTestLength-1]);
     });
-  }
-);
+  });// end jquery function
 
 
 
-};
+};// end load html

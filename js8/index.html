@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Test</title>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
     <script src="js/html-customer.js" type="text/javascript"></script>
     <script src="js/api.js" type="text/javascript"></script>
     <script src='http://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
@@ -21,8 +21,23 @@
         </div>
       </div>
       <div id='openweathermap-widget'></div>
-
     </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="input-group">
+          <input type="text" class="form-control" id='test-add-qustion' placeholder="Укажите свой вопрос">
+          <input type="text" class="form-control false-answer" placeholder="Укажите не верный вариант ответа">
+          <input type="text" class="form-control false-answer" placeholder="Укажите не верный вариант ответа">
+          <input type="text" class="form-control false-answer" placeholder="Укажите не верный вариант ответа">
+          <input type="text" class="form-control try-answer" placeholder="Укажите верный вариант ответа">
+
+          <span class="input-group-btn">
+            <button class="btn btn-secondary col-lg-8" type="button" id='test-add'>Записать результат!</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
 
 
   </body>

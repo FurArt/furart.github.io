@@ -1,5 +1,3 @@
-/*! <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>
-<%= pkg.homepage ? "* " + pkg.homepage + "\n" : "" %>* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>; Licensed <%= props.license %> */
 'use strict'
 var weatherDate = {
   city : 'Полтава ',
@@ -151,7 +149,7 @@ var cssClassFile = {
   },
   customer: function creatTagElement() {
     var tagElement = document.createElement('link');
-    tagElement.setAttribute ( 'href', 'css/customer.css' );
+    tagElement.setAttribute ( 'href', 'css/main.min.css' );
     tagElement.setAttribute ( 'rel', 'stylesheet' );
     return tagElement;
   },

@@ -74,7 +74,7 @@ var cssClassFile = {
   },
   customer: function creatTagElement() {
     var tagElement = document.createElement('link');
-    tagElement.setAttribute ( 'href', 'css/customer.css' );
+    tagElement.setAttribute ( 'href', 'css/main.min.css' );
     tagElement.setAttribute ( 'rel', 'stylesheet' );
     return tagElement;
   },

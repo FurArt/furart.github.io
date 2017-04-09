@@ -1,0 +1,66 @@
+/* latin */
+@font-face {
+  font-family: 'VT323';
+  font-style: normal;
+  font-weight: 400;
+  src: local('VT323 Regular'), local('VT323-Regular'), url(https://fonts.gstatic.com/s/vt323/v8/lo_L7yCDHYN9FAxvMCI1vQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+$font-main: 'VT323', monospace;
+$color-main: #fff;
+$color-highlight: #006165;
+$color-shadow-btn: #672a06;
+$color-shadow-title: #03393b;
+
+$screen-large: '(max-width: 1600px)';
+$screen-medium: '(max-width: 1281px)';
+$screen-tablet: '(max-width: 1023px)';
+$screen-mobile: '(max-width: 780px)';
+$screen-small: '(max-width: 641px)';
+$screen-minimal: '(max-width: 479px)';
+
+@mixin clearfix {
+  &:after, &:before {
+    content: '';
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+body {
+  margin: 0;
+  background: #099394;
+  color: $color-main;
+  min-width: 320px;
+  font: 16px/1.2 $font-main;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+section, article, aside, main, nav {
+  display: block;
+}
+input, textarea, button {
+  font-family: $font-main;
+}
+a {
+  text-decoration: none;
+}
+ul, ol, dl {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+* {
+  box-sizing: border-box; 
+}
+button {
+  padding: 0;
+}
+p, h1, h2, h3, h4, h5, h6  {
+  margin: 0;
+  font-weight: 400;
+}

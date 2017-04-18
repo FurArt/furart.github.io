@@ -3,19 +3,15 @@
 /*font-family: 'Ubuntu', sans-serif;
 font-family: 'Open Sans Condensed', sans-serif;*/
 
-$font-main: 'VT323', monospace;
+$font-main: 'Ubuntu', sans-serif;
+$font-text:'Open Sans Condensed', sans-serif;
 $color-main: #fff;
 $color-highlight: #006165;
 $color-shadow-btn: #672a06;
 $color-shadow-title: #03393b;
-
-$screen-large: '(max-width: 1600px)';
-$screen-medium: '(max-width: 1281px)';
-$screen-tablet: '(max-width: 1023px)';
-$screen-mobile: '(max-width: 780px)';
-$screen-small: '(max-width: 641px)';
-$screen-minimal: '(max-width: 479px)';
-
+$color-active: #248cec;
+$color-hover-text: #248cec;
+$width-main: 1160px;
 @mixin clearfix {
   &:after, &:before {
     content: '';
@@ -29,9 +25,11 @@ $screen-minimal: '(max-width: 479px)';
 
 body {
   margin: 0;
-  background: #099394;
+  padding: 0;
+  background: #fff;
   color: $color-main;
-  min-width: 320px;
+  min-width: 1160px;
+  width: 100%;
   font: 16px/1.2 $font-main;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -44,11 +42,19 @@ input, textarea, button {
 }
 a {
   text-decoration: none;
+  color: #fff;
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 ul, ol, dl {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+li {
+  display: block;
 }
 * {
   box-sizing: border-box;

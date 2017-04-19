@@ -1,0 +1,19 @@
+.main-header{
+  padding-top: $pading-vertical;
+  .img-logo{
+    float: left;
+  }
+  .menu-comuni{
+    float: right;
+    width: $width-comuni-menu;
+
+    .menu-element{
+      float: left;
+      width: 100% / $quant-social-link;
+    }
+    .menu-link{
+      display: block;
+      text-align: center;
+    }
+  }
+}

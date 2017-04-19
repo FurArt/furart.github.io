@@ -1,0 +1,52 @@
+.container-menu{
+  background: $color-background-menu;
+  overflow: hidden;
+
+  .main-menu{
+    float: left;
+    width: 50%;
+    line-height: $height-menu;
+    padding-inline-start: 0px;
+    height: $height-menu;
+    .menu-element{
+      float: left;
+      width: 100% / $quant-menu-top-element;
+      text-align: center;
+      border-left: 1px solid $color-background-menu / 2;
+      border-right:1px solid $color-background-menu / 2;
+      border-collapse: collapse;
+
+    }
+    .menu-link{
+      width: 100%;
+      height: 100%;
+      display: block;
+
+      &:hover, &:active{
+
+      }
+    }
+  }
+  .search-contain{
+    float: right;
+    position: relative;
+    padding: 1%;
+    .search-form{
+      width: 260px;
+      height: 3em;
+      background: $color-background-menu * 1.4;
+      border: 1px solid $color-background-menu / 2;
+      padding: 3%;
+      color:$color-fonts-search;
+    }
+
+    .btn-search{
+      position: absolute;
+      left: 88%;
+      top: 1.5em;
+      color:$color-fonts-search;
+      
+    }
+  }
+
+}

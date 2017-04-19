@@ -1,3 +1,6 @@
 .container {
-  
+  width: $width-main;
+  @include clearfix;
+  margin: 0 auto;
+  padding-top: $pading-vertical;
 }

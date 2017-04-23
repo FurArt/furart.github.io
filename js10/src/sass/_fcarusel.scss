@@ -1,0 +1,91 @@
+.fcarousel-wrapper{
+  width: auto;
+  margin: 0 auto;
+  left: 10px;
+  overflow: hidden;
+}
+.fcarousel{
+  position: relative;
+  width: 560px;
+  /* height: 123px; */
+  overflow: hidden;
+  z-index: 2;
+  margin: auto;
+}
+.fcarousel-list{
+  padding: 0 0 0 0;
+  width: 744px;
+  overflow: hidden;
+  -webkit-padding-start: 0;
+  position: relative;
+  z-index: 1;
+  left: 0;
+}
+.fcarousel-element{
+  float: left;
+  padding: 5px 5px 5px 5px;
+  display: block;
+}
+.fcarousel-img{
+  width: 218px;
+}
+.fcarousel-control-prev{
+  left: 3%;
+}
+.fcarousel-control-next{
+  right: 3%;
+}
+.fcarousel-control-prev,
+.fcarousel-control-next{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    z-index: 4;
+    font-size: 20px;
+    color: #fff;
+    width: 30px;
+    background: #000;
+    border-radius: 20px;
+    border: 1px solid #000;
+}
+.fcarousel-control-prev:hover,
+.fcarousel-control-prev:active,
+.fcarousel-control-prev:focus,
+.fcarousel-control-next:hover,
+.fcarousel-control-next:active,
+.fcarousel-control-next:focus{
+  color: #000;
+  text-decoration: none;
+  background: #eee;
+  border: 1px solid #eee;
+}
+.fcarousel-panel{
+  position: absolute;
+  z-index: 3;
+  top: 90%;
+  left: 50%;
+  width: 50%;
+.active-btn {
+  &::before{
+    content: "";
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    z-index: 5;
+    background: #000;
+    top: 24%;
+    left: 21%;
+
+  }
+}
+.fcarousel-btn {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  float: left;
+  margin: 0 15px 0 0;
+
+}
+}

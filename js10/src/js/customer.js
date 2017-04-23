@@ -12,6 +12,7 @@
       'minimuSet': 0,
       'maksimumSet': 0,
       'positionCaunt':0,
+      'qauntImgAll': 0,
     }, options);
     settings.qauntImg = this.find(".fcarousel-element").length;
     settings.listWidth = (settings.imgWidth + 10) * settings.qauntImg;
@@ -19,7 +20,6 @@
     settings.maksimumSet = (settings.qauntImg - settings.qauntImgShow) * (settings.imgWidth + 10);
 
      var elementFC = this.children().children().children().children('.fcarousel-img');
-     console.log(elementFC);
       elementFC.css({
         "width": settings.imgWidth +"px",
       });
@@ -43,13 +43,26 @@
           settings.positionCaunt = settings.positionCaunt - settings.imgWidth - 10;
           elementFC.parents('.fcarousel-list').animate({"left":settings.positionCaunt+'px'});
         }
-      })
+      });
+    settings.qauntImgAll=this.find('.fcarousel-element').length;
+    for (var i = 0; i < settings.qauntImgAll; i++) {
+      this.find(".fcarousel-panel").append("<li class='fcarousel-btn'></li>")
+    };
+
+    if (this.find('.fcarousel-btn').length>0) {
+      console.log(
+        $(this.find('.fcarousel-btn')[0]).addClass('active-btn')
+      );
+    }
+
+
+
     return this
   };
 })( jQuery );
 
 $( function() {
-  $('.slider-header').fCurusel(
+  $('.fcarousel-wrapper').fCurusel(
     {
     'qauntImgShow' : 1,
     'imgWidth'  : 1160,

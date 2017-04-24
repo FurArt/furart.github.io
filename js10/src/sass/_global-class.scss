@@ -3,4 +3,20 @@
   @include clearfix;
   margin: 0 auto;
   padding-top: $pading-vertical;
+  position: relative;
+}
+.logo-conteiner{
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  z-index: 100;
+
+
+  .logo-text{
+    font-size: $font-build;
+
+  }
+  .logo-text_yelow{
+
+  }
 }

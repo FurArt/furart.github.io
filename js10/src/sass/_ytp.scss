@@ -1,0 +1,46 @@
+.ytp{
+  float: left;
+  width: 33%;
+  position: relative;
+  padding: 0 0 0 11%;
+  &:last-of-type{
+    padding-right: 0
+  }
+  p {
+    height: 55px;
+    overflow: hidden;
+  }
+  a {
+    clear: both;
+    float: right;
+  }
+  @include clearfix;
+}
+
+.power{
+  &::after{
+content: ''
+  }
+  &::before{
+content: ''
+  }
+
+}
+.technologies{
+  &::after{
+content: ''
+  }
+  &::before{
+content: ''
+  }
+
+}
+.support{
+  &::after{
+content: ''
+  }
+  &::before{
+content: ''
+  }
+
+}

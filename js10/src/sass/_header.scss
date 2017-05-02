@@ -12,6 +12,7 @@
       width: 100% / $quant-social-link;
     }
     .menu-link{
+      transition: all 0.2s;
       display: block;
       text-align: center;
       &:hover{

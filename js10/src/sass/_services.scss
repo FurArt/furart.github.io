@@ -1,0 +1,44 @@
+.black {
+  background: $backgroun-services;
+  h2 {
+    padding-bottom: $pading-vertical;
+  }
+  .services-text{
+    a{
+      display: inline-block;
+      position: relative;
+    &:hover{
+      &::before{
+        content: "+";
+        line-height: 261px;
+        font-size: 70px;
+        font: $font-text;
+        position: absolute;
+        top: 23px;
+        left: 23px;
+        display: inline-block;
+        background: rgba(36,140,236,.8);
+        width: 261px;
+        height: 261px;
+      }
+      span{
+        color:$color-hover-text;
+      }
+
+
+    }
+      float: left;
+      width: 25%;
+      text-align: center;
+      overflow: hidden;
+      padding: 2%;
+      span{
+        margin: 20px 0 0 0;
+        clear: left;
+        display: inline-block;
+        &:hover{
+        }
+      }
+    }
+  }
+}

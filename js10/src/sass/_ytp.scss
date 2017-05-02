@@ -1,46 +1,122 @@
+$color-text-label: #2a2b2e;
+$font-size-ytp: 90px;
+
+@mixin after-design($content-ytp) {
+  content: $content-ytp;
+  font-family: $font-main;
+  font-size: $font-size-ytp;
+  height: $font-size-ytp;
+  line-height: $font-size-ytp;
+  color: $color-text-label;
+  overflow: hidden;
+  position: absolute;
+  z-index: 10;
+  width: auto;
+  display: block;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+}
+@mixin  before-design($background-im-posit){
+  content: '';
+  position: absolute;
+  display: block;
+  width: 35px;
+  height: 35px;
+  top: 1em;
+  background: url(../img/icon-ytp.png) no-repeat 0 $background-im-posit
+}
 .ytp{
   float: left;
   width: 33%;
   position: relative;
-  padding: 0 0 0 11%;
+  padding: 4em 0px 0 11%;
   &:last-of-type{
     padding-right: 0
   }
   p {
     height: 55px;
     overflow: hidden;
+    margin-bottom: 1em;
+    color: $color-text-font*2;
+    font-family: $font-text;
+    font-size: $font-size;
   }
-  a {
+  .ytp-link {
     clear: both;
     float: right;
+    color: $color-text-font;
+    font-family: $font-main;
+    display: block;
+    transition: all 0.2s;
+    &::after{
+      content: '';
+      display: inline-block;
+      background: url(../img/arrow-right_blue.png) no-repeat;
+      width: 10px;
+      height: 10px;
+      margin: 7px 2px 0 7px;
+    }
+    &:hover{
+      color:$color-active;
+      &::after{
+        background: url(../img/arrow-right_gray.png) no-repeat;
+      }
+    }
+  }
+  h3{
+    font-family: $font-main;
+    font-size: $font-size * 1.25;
+    line-height: $font-size * 1.25;
+    margin: 0 0 1em 0;
+    color: $color-text-font;
   }
   @include clearfix;
 }
+/*.right-arrow{
+  background: url(../img/arrow-right_blue.png) no-repeat;
+  width: 10px;
+  height: 10px;
+  display: block;
+  float: right;
+  margin: 7px 2px 0 7px;
+  &:hover{
+    background: url(../img/arrow-right_gray.png) no-repeat;
+    width: 10px;
+    height: 10px;
+    display: block;
+    float: right;
+    margin: 7px 2px 0 7px;
+  }
+}*/
 
 .power{
-  &::after{
-content: ''
+  p{
+    &::after{
+      @include after-design('01');
+    }
+    &::before{
+      @include before-design(0);
+    }
   }
-  &::before{
-content: ''
-  }
-
 }
 .technologies{
-  &::after{
-content: ''
+  p{
+    &::after{
+      @include after-design('02');
+    }
+    &::before{
+      @include before-design(-35px);
+    }
   }
-  &::before{
-content: ''
-  }
-
 }
 .support{
-  &::after{
-content: ''
+  p{
+    &::after{
+      @include after-design('03');
+    }
+    &::before{
+      @include before-design(-70px);
+    }
   }
-  &::before{
-content: ''
-  }
-
 }

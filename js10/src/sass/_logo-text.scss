@@ -1,0 +1,29 @@
+.logo-conteiner{
+    position: absolute;
+    bottom: 9%;
+    left: 7%;
+    z-index: 6;
+    display: block;
+    text-transform: uppercase;
+    font-size: $font-build;
+  &::before{
+    content: "";
+    position: absolute;
+    z-index: 5;
+    background: url(../img/logo-bg-black.png) no-repeat;
+    width: 315px;
+    height: 250px;
+    top: 0;
+    left: -12%;
+  }
+
+
+  .logo-text{
+      position: relative;
+      z-index: 8;
+    }
+  .logo-text_yelow{
+    position: relative;
+    color: $color-hover-text;
+  }
+}

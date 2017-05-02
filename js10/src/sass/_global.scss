@@ -3,7 +3,7 @@
 
 /*fonts*/
 $font-main: 'Ubuntu', sans-serif;
-$font-text:'Open Sans Condensed', sans-serif;
+$font-text:'Arial', sans-serif;
 /*color*/
 $color-main: #fff;
 $color-highlight: #006165;
@@ -13,6 +13,8 @@ $color-active: #248cec;
 $color-hover-text: #cc9919;
 $color-background-menu: #2a2d32;
 $color-fonts-search:#626466;
+$color-text-font: #2a2b2e;
+$backgroun-services: #2a2d32;
 
 /*size*/
 $width-comuni-menu:160px;
@@ -45,7 +47,7 @@ body {
   margin: 0;
   padding: 0;
   background: green;
-  color: $color-main;
+  color: $color-text-font;
   min-width: 1160px;
   width: 100%;
   font: 16px/1.2 $font-main;

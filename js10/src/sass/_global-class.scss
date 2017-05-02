@@ -7,13 +7,14 @@
 }
 .logo-conteiner{
   position: absolute;
-  bottom: 1%;
-  left: 1%;
-  z-index: 100;
-
+  bottom: 7%;
+  left: 3%;
+  z-index: 7;
+  display: block;
+  text-transform: uppercase;
+  font-size: $font-build;
 
   .logo-text{
-    font-size: $font-build;
 
   }
   .logo-text_yelow{

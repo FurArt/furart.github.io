@@ -1,4 +1,73 @@
-.img-news-container{
-  width: 50%;
+.news-banners{
   float: left;
+  width: 49%;
+  .img-news{
+    float: left;
+    display: inline-block;
+    margin-right: $pading-vertical * 0.8;
+  }
+  .latest-news{
+    color: $color-black-text;
+    padding-bottom: $pading-vertical;
+    font-size: $font-size * 1.5;
+    font-family: $font-main;
+    text-transform: capitalize;
+
+  }
+  .news{
+    color: $color-news;
+  }
+  .news-container{
+    clear: left;
+    float: left;
+    position: relative;
+    padding-bottom: $pading-vertical * 0.8;
+
+
+
+      .date{
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35px;
+        text-align: center;
+        .month{
+          width: 35px;
+          height: 35px;
+          line-height: 35px;
+          float: left;
+          display: inline-block;
+          background: #248cec;
+
+        }
+        .day{
+          width: 35px;
+          height: 35px;
+          line-height: 35px;
+          clear: left;
+          display: inline-block;
+          background: #f4b60d;
+
+        }
+      }
+
+  }
+  h4{
+    display: inline-block;
+    margin: 0 0 $pading-vertical*0.7 0;
+    .news-link {
+      transition: all 0.2s;
+      color:$color-black-text;
+      &:hover{
+        color:$color-blue-text;
+      }
+    }
+  }
+
+  .author, .qulity-comments{
+    color: $color-blue-text;
+    cursor: pointer;
+  }
+
 }

@@ -69,3 +69,24 @@ $( function() {
     }
   );
 });
+
+$(function () {
+    var $linkFindClass =  $(".panel-container-element");
+      $linkFindClass.click(function(e) {
+              e.preventDefault();
+
+      })
+//     $linkFindClass.click(function (e) {
+//       console.log(this);
+// if () {//проверка скликивание по 1 кнопке
+//         console.log('work');
+//       } else {
+//         $(".active_panel-container-element").removeClass('active_panel-container-element');
+//         var $href = $(this).attr('href');
+//         var $findId = $($href);
+//         $findId.addClass('active');
+//         $(this).addClass('active');
+//       };
+//     });
+//
+});

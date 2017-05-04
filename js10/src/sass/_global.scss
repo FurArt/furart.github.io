@@ -18,7 +18,8 @@ $backgroun-services: #2a2d32;
 $color-black-text:#2a2d32;
 $color-blue-text:#0187f4;
 $color-news:#8a8a8a;
-
+$footer-bg:#2a2d32;
+$footer-text-hover:#248cec;
 /*size*/
 $width-comuni-menu:160px;
 $pading-vertical:40px;
@@ -49,7 +50,7 @@ $width-main: 1160px;
 body {
   margin: 0;
   padding: 0;
-  background: green;
+  background: #fff;
   color: $color-text-font;
   min-width: 1160px;
   width: 100%;

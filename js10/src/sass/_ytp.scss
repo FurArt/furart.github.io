@@ -30,7 +30,7 @@ $font-size-ytp: 90px;
   float: left;
   width: 33%;
   position: relative;
-  padding: 4em 0px 0 11%;
+  padding: 4em 0px $pading-vertical 11%;
   &:last-of-type{
     padding-right: 0
   }

@@ -74,6 +74,17 @@ $(function () {
     var $linkFindClass =  $(".panel-container-element");
       $linkFindClass.click(function(e) {
               e.preventDefault();
+            if ($(this).hasClass('active_panel-container-element')||$(this).hasClass('active_panel-container-element')) {
+
+            } else {
+
+              $linkAkard = $($($(this).find('a')).attr('href')).addClass('active-panel-content');
+              $($(this).siblings('.active_panel-container-element'))
+              .removeClass('active_panel-container-element');
+              console.log(
+              );
+
+            }
 
       })
 //     $linkFindClass.click(function (e) {

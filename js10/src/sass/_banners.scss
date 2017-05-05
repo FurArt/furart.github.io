@@ -75,13 +75,30 @@
       color: $color-news;
     }
   }
-  .active_panel-container-element{}
+  .active_panel-container-element{
+    a{
+      &::before{
+        content: '-';
+      }
+
+      &:hover{
+        color: #fff;
+        background: #f4b60d;
+        border: solid 1px #e8e8e8;
+        &:before{
+          content: '-';
+          color: #fff;
+          background: #f4b60d;
+            border-right: solid 1px #f7f7f7;
+        }
+      }
+    }
 }
 
-.partner{
+.partner {
   display: flex;
   justify-content: space-between;
   background: #fff;
   margin: 4% auto;
 }
-  
+}

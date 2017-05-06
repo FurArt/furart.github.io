@@ -1,0 +1,1 @@
+var data=[];$(function(){jQuery.getJSON("../files/data.json",function(n){console.log(n)})});

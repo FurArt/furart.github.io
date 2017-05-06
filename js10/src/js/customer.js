@@ -15,9 +15,9 @@
       'qauntImgAll': 0,
     }, options);
     settings.qauntImg = this.find(".fcarousel-element").length;
-    settings.listWidth = (settings.imgWidth + 10) * settings.qauntImg;
-    settings.fcarouselWidth = settings.qauntImgShow * (settings.imgWidth + 10);
-    settings.maksimumSet = (settings.qauntImg - settings.qauntImgShow) * (settings.imgWidth + 10);
+    settings.listWidth = (settings.imgWidth) * settings.qauntImg;
+    settings.fcarouselWidth = settings.qauntImgShow * (settings.imgWidth);
+    settings.maksimumSet = (settings.qauntImg - settings.qauntImgShow) * (settings.imgWidth);
 
      var elementFC = this.children().children().children().children('.fcarousel-img');
       elementFC.css({
@@ -46,17 +46,23 @@
       });
     settings.qauntImgAll=this.find('.fcarousel-element').length;
     for (var i = 0; i < settings.qauntImgAll; i++) {
-      this.find(".fcarousel-panel").append("<li class='fcarousel-btn'></li>")
+      this.find(".fcarousel-panel").append("<li class='fcarousel-btn'><a href='"+i+"'></li>")
     };
-
     if (this.find('.fcarousel-btn').length>0) {
-      console.log(
-        $(this.find('.fcarousel-btn')[0]).addClass('active-btn')
-      );
+        $(this.find('.fcarousel-btn')[0]).find('a').addClass('active-btn')
     }
+      $(this.find('.fcarousel-btn')).find('a').click( function(e) {
+          e.preventDefault();
 
+          var $caruselBtnCaunt = $(this).attr('href');
+          var $left = -(settings.imgWidth * $caruselBtnCaunt);
+          elementFC.parents('.fcarousel-list').animate({"left": $left + 'px'});
+          console.log(
 
-
+          );
+          $('.active-btn').removeClass('active-btn');
+          $(this).addClass('active-btn');
+      })
     return this
   };
 })( jQuery );
@@ -72,32 +78,24 @@ $( function() {
 
 $(function () {
     var $linkFindClass =  $(".panel-container-element");
-      $linkFindClass.click(function(e) {
-              e.preventDefault();
-            if ($(this).hasClass('active_panel-container-element')||$(this).hasClass('active_panel-container-element')) {
+      $linkFindClass.click( function(e) {
+          e.preventDefault();
+          if ($(this).hasClass('active_panel-container-element')||$(this).hasClass('active_panel-container-element')) {
+            $(this)
+            .removeClass('active_panel-container-element');
+            $($(this).siblings('.panel-content'))
+            .removeClass('active-panel-content');
+          } else {
+            $($(this).siblings('.active_panel-container-element'))
+            .removeClass('active_panel-container-element');
+            $($(this).siblings('.panel-content'))
+            .removeClass('active-panel-content');
+            $(this).addClass('active_panel-container-element');
+            $($($(this).find('a')).attr('href')).addClass('active-panel-content');
 
-            } else {
-
-              $linkAkard = $($($(this).find('a')).attr('href')).addClass('active-panel-content');
-              $($(this).siblings('.active_panel-container-element'))
-              .removeClass('active_panel-container-element');
-              console.log(
-              );
-
-            }
-
-      })
-//     $linkFindClass.click(function (e) {
-//       console.log(this);
-// if () {//проверка скликивание по 1 кнопке
-//         console.log('work');
-//       } else {
-//         $(".active_panel-container-element").removeClass('active_panel-container-element');
-//         var $href = $(this).attr('href');
-//         var $findId = $($href);
-//         $findId.addClass('active');
-//         $(this).addClass('active');
-//       };
-//     });
-//
+            console.log(
+            );
+          }
+        }
+    )
 });

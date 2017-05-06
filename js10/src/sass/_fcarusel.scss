@@ -23,7 +23,7 @@
 }
 .fcarousel-element{
   float: left;
-  padding: 5px 5px 5px 5px;
+  // padding: 5px 5px 5px 5px;
   display: block;
 }
 .fcarousel-img{
@@ -78,6 +78,11 @@
     left: 21%;
 
   }
+}
+a{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 .fcarousel-btn {
   position: relative;

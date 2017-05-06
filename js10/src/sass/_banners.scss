@@ -56,11 +56,11 @@
             border-right: solid 1px #f7f7f7;
         }
       }
-      &:active, &:focus {
-        &::before{
-          content: '-'
-        }
-      }
+      // &:active, &:focus {
+      //   &::before{
+      //     content: '-'
+      //   }
+      // }
     }
 }
   .panel-content {
@@ -70,6 +70,7 @@
   }
   .active-panel-content{
     p{
+      transition: 0.2s;
       display: inline-block;
       padding: 5% 5% 5% 5%;
       color: $color-news;
@@ -95,10 +96,11 @@
     }
 }
 
+}
 .partner {
   display: flex;
   justify-content: space-between;
   background: #fff;
   margin: 4% auto;
-}
+
 }

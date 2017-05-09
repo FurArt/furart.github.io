@@ -22,6 +22,7 @@
   "dependencies": {
     "jquery": "^2.2.4",
     "jquery-colorbox": "^1.6.4",
+    "lodash": "^4.17.4",
     "slick-carousel": "^1.6.0"
   }
 }

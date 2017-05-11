@@ -75,27 +75,28 @@ $( function() {
     }
   );
 });
-
-$(function () {
+try {
+  $(function () {
     var $linkFindClass =  $(".panel-container-element");
       $linkFindClass.click( function(e) {
           e.preventDefault();
-          if ($(this).hasClass('active_panel-container-element')||$(this).hasClass('active_panel-container-element')) {
-            $(this)
-            .removeClass('active_panel-container-element');
-            $($(this).siblings('.panel-content'))
-            .removeClass('active-panel-content');
+          if ($(this).hasClass('active_panel-container-element')) {
+            $(this).removeClass('active_panel-container-element');
+            $($($(this).find('a')).attr('href')).removeClass('active-panel-content');
           } else {
-            $($(this).siblings('.active_panel-container-element'))
-            .removeClass('active_panel-container-element');
-            $($(this).siblings('.panel-content'))
-            .removeClass('active-panel-content');
+            // $($(this).siblings('.active_panel-container-element'))
+            // .removeClass('active_panel-container-element');
+            // $($(this).siblings('.panel-content'))
+            // .removeClass('active-panel-content');
             $(this).addClass('active_panel-container-element');
             $($($(this).find('a')).attr('href')).addClass('active-panel-content');
-
-            console.log(
-            );
           }
         }
     )
 });
+
+} catch (e) {
+console.log(e);
+} finally {
+
+}

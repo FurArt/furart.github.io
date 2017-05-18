@@ -14,6 +14,7 @@ jsFiles = [
 ];
 htmlFiles = ['./src/*.html', './src/favicon.png'];
 imgFiles = ['./src/img/**/*.*'];
+imgFilesPng = ['./src/img/png/*.*'];
 fontsFiles = [
   './src/fonts/*'
 ];
@@ -35,6 +36,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const browserSync = require('browser-sync').create();
+const spritesmith = require('gulp.spritesmith'); //spritesmith! - AD AF
 const reload = browserSync.reload;
 
 /* PostCSS processors */
@@ -49,6 +51,20 @@ gulp.task('clean', () =>
   .pipe(clean())
 );
 
+/* build sprite IMG*/
+if (imgFilesPng.length) {
+  gulp.task('sprite', function () {
+    var spriteData = gulp.src(imgFilesPng).pipe(spritesmith({
+      imgName: '../img/sprite.png',
+      cssName: '_sprite.scss'
+    }));
+    console.log(spriteData);
+    return spriteData.img.pipe(gulp.dest('./src/img/')),
+    spriteData.css.pipe(gulp.dest('./src/sass/'));
+    // spriteData.imgName.pipe(gulp.dest('./src/sass/'));
+  });
+};
+
 /* build sass */
 if (sassFiles.length) {
   gulp.task('sass', () =>
@@ -58,7 +74,8 @@ if (sassFiles.length) {
     .pipe(gulp.dest('./build/css/'))
     .pipe(reload({stream: true}))
   );
-}
+};
+
 
 /* build css */
 if (cssFiles.length) {
@@ -89,6 +106,7 @@ if (htmlFiles.length) {
   );
 }
 
+
 /* build img */
 if (imgFiles.length) {
   gulp.task('img', () =>
@@ -96,7 +114,8 @@ if (imgFiles.length) {
     .pipe(gulp.dest('./build/img/'))
     .pipe(reload({stream: true}))
   );
-}
+};
+
 
 /* build fonts */
 if (fontsFiles.length) {
@@ -116,6 +135,7 @@ if (anotherFiles.length) {
 
 /* create new build */
 gulp.task('build', ['clean'], () => {
+  if (imgFilesPng.length) gulp.start('sprite'); // srtite build
   if (sassFiles.length) gulp.start('sass'); // sass build
   if (cssFiles.length) gulp.start('css'); // css build
   if (jsFiles.length) gulp.start('js'); // js build
@@ -134,6 +154,7 @@ gulp.task('default', ['build'], () => {
   if (imgFiles.length) watch(imgFiles, () => gulp.start('img')); // img watcher
   if (fontsFiles.length) watch(fontsFiles, () => gulp.start('fonts')); // fonts watcher
   if (anotherFiles.length) watch(anotherFiles, () => gulp.start('files')); // files watcher
+  if (imgFilesPng.length) watch(imgFilesPng, () => gulp.start('sprite')); // sprite watcher
 
   browserSync.init({
       notify: false,

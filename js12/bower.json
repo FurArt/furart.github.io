@@ -1,0 +1,21 @@
+{
+  "name": "js10",
+  "description": "SCSS",
+  "main": "index.js",
+  "authors": [
+    "FurArt <iiionerart@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/FurArt/furart.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*"
+  }
+}

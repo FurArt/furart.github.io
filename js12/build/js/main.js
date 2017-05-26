@@ -1,0 +1,1 @@
+require.config({paths:{lodash:"lodash.min",jquery:"jquery.min"},shim:{lodash:{exports:"lodash"}}}),require(["lodash","jquery","model","view","controller"],function(a,e,s,d,o){var r=["asdfasdf","asdfasdf","asdfadsf","asdfas","asda","фывафывафывафыв","some think"],l=new s.Model(r),n=new d.View(l.data);new o.Controller(l,n)});

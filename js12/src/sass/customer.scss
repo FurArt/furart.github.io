@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo&subset=cyrillic,cyrillic-ext,latin-ext');
+$fonts:'Arimo', sans-serif;
+body{
+  background: #000;
+  color: #fff;
+  width: 100%;
+  font-family: $fonts;
+}
+.wrapper{
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+
+  ul{
+    text-align: center;
+    list-style-type: none;
+    span{
+      cursor: pointer;
+    }
+  }
+  input{
+    width: 300px;
+  }
+}

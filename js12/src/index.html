@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+     <script data-main="js/main" src="js/require.js"></script>
+     <link  href="css/customer.css" rel="stylesheet">
+  </head>
+  <body>
+    <script type="text/template" id='wrapper-tmpl'>
+      <div class='wrapper'>
+        <ul class="list-item">
+        </ul>
+        <div class="controlls">
+          <input type="text" class="value-item" placeholder="Укажите информацию для отображения">
+          <button class="add-item">Добавить до списка</button>
+        </div>
+      </div>
+    </script>
+    <script type="text/template" id='li-tmpl'>
+      <%for (var i = 0; i < count; i++ ) {%>
+        <li><%=li[i]%>  <span data-value="<%=li[i]%>" class="remove-item">X</span></li>
+          <%};%>
+    </script>
+  </body>
+</html>

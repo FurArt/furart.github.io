@@ -28,7 +28,9 @@ try {
               ulList : $('.list-item'),
               input : $('.value-item'),
               button : $('.add-item'),
-            }
+              wrapper : $('.wrapper'),
+            };
+
         }
       };
 

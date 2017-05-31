@@ -1,0 +1,134 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-air-plane-name: 'icon-air-plane';
+$icon-air-plane-x: 33px;
+$icon-air-plane-y: 24px;
+$icon-air-plane-offset-x: -33px;
+$icon-air-plane-offset-y: -24px;
+$icon-air-plane-width: 16px;
+$icon-air-plane-height: 15px;
+$icon-air-plane-total-width: 110px;
+$icon-air-plane-total-height: 57px;
+$icon-air-plane-image: '../img/sprite.png';
+$icon-air-plane: (33px, 24px, -33px, -24px, 16px, 15px, 110px, 57px, '../img/sprite.png', 'icon-air-plane', );
+$icon-butel-name: 'icon-butel';
+$icon-butel-x: 0px;
+$icon-butel-y: 41px;
+$icon-butel-offset-x: 0px;
+$icon-butel-offset-y: -41px;
+$icon-butel-width: 13px;
+$icon-butel-height: 16px;
+$icon-butel-total-width: 110px;
+$icon-butel-total-height: 57px;
+$icon-butel-image: '../img/sprite.png';
+$icon-butel: (0px, 41px, 0px, -41px, 13px, 16px, 110px, 57px, '../img/sprite.png', 'icon-butel', );
+$icon-logo-desinger-name: 'icon-logo-desinger';
+$icon-logo-desinger-x: 0px;
+$icon-logo-desinger-y: 0px;
+$icon-logo-desinger-offset-x: 0px;
+$icon-logo-desinger-offset-y: 0px;
+$icon-logo-desinger-width: 110px;
+$icon-logo-desinger-height: 24px;
+$icon-logo-desinger-total-width: 110px;
+$icon-logo-desinger-total-height: 57px;
+$icon-logo-desinger-image: '../img/sprite.png';
+$icon-logo-desinger: (0px, 0px, 0px, 0px, 110px, 24px, 110px, 57px, '../img/sprite.png', 'icon-logo-desinger', );
+$icon-tea-name: 'icon-tea';
+$icon-tea-x: 17px;
+$icon-tea-y: 24px;
+$icon-tea-offset-x: -17px;
+$icon-tea-offset-y: -24px;
+$icon-tea-width: 16px;
+$icon-tea-height: 16px;
+$icon-tea-total-width: 110px;
+$icon-tea-total-height: 57px;
+$icon-tea-image: '../img/sprite.png';
+$icon-tea: (17px, 24px, -17px, -24px, 16px, 16px, 110px, 57px, '../img/sprite.png', 'icon-tea', );
+$icon-tv-name: 'icon-tv';
+$icon-tv-x: 0px;
+$icon-tv-y: 24px;
+$icon-tv-offset-x: 0px;
+$icon-tv-offset-y: -24px;
+$icon-tv-width: 17px;
+$icon-tv-height: 17px;
+$icon-tv-total-width: 110px;
+$icon-tv-total-height: 57px;
+$icon-tv-image: '../img/sprite.png';
+$icon-tv: (0px, 24px, 0px, -24px, 17px, 17px, 110px, 57px, '../img/sprite.png', 'icon-tv', );
+$spritesheet-width: 110px;
+$spritesheet-height: 57px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($icon-air-plane, $icon-butel, $icon-logo-desinger, $icon-tea, $icon-tv, );
+$spritesheet: (110px, 57px, '../img/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

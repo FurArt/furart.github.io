@@ -1,0 +1,21 @@
+.icon-air-plane {
+  @include sprite($icon-air-plane);
+}
+.icon-butel {
+  @include sprite($icon-butel);
+}
+.icon-logo-desinger{
+  @include sprite($icon-logo-desinger);
+}
+.icon-tea{
+  @include sprite(
+    $icon-tea
+  );
+
+}
+.icon-tv{
+  @include sprite(
+    $icon-tv
+  );
+
+}

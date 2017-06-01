@@ -27,6 +27,7 @@ try {
               temleteWraper : $('#wrapper-tmpl'),
               ulList : $('.list-item'),
               input : $('.value-item'),
+              inputCheckbox: $("[type='checkbox']"),
               button : $('.add-item'),
               wrapper : $('.wrapper'),
             };

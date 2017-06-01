@@ -20,7 +20,7 @@ require(
     'controller'
   ],
   function(_, $, model, view, controller) {
-    var informForStart = ['asdfasdf', 'asdfasdf', 'asdfadsf', 'asdfas','asda','фывафывафывафыв','some think']
+    var informForStart = ['Тут могла быть ваша реклама', 'Тут могла быть ваша реклама', 'Тут могла быть ваша реклама', 'Тут могла быть ваша реклама','Тут могла быть ваша реклама','Тут могла быть ваша реклама','Тут могла быть ваша реклама']
     var initModel = new model.Model(informForStart);
     var initView = new view.View(initModel.data);
     var startControl = new controller.Controller(initModel, initView);

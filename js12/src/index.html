@@ -9,17 +9,18 @@
   <body>
     <script type="text/template" id="wrapper-tmpl">
       <div class="wrapper">
+        <h1>to do list</h1>
         <ul class="list-item">
         </ul>
         <div class="controlls">
-          <input type="text" class="value-item" placeholder="Укажите информацию для отображения">
-          <button class="add-item">Добавить до списка</button>
+          <input type="text" class="value-item" placeholder="Add task to do list">
+          <button class="add-item">+</button>
         </div>
       </div>
     </script>
     <script type="text/template" id="li-tmpl">
       <%for (var i = 0; i < count; i++ ) {%>
-        <li><%=li[i]%>  <span data-value="<%=li[i]%>" class="remove-item">X</span></li>
+        <li><input type="checkbox"><label class="checkbox-list-item"></label><p><%=li[i]%></p>  <span data-value="<%=li[i]%>" class="remove-item"></span></li>
           <%};%>
     </script>
   </body>

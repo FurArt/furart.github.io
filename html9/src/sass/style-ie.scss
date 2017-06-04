@@ -249,8 +249,9 @@ div.musik::before{
 }
 .wrapper-white{
   width: 100%;
-  display:flex;
-  flex-flow: column;
+  // display:flex;
+  // flex-flow: column;
+  overflow: hidden;
   position: relative;
   background: #f9f9f9;
 }
@@ -258,8 +259,8 @@ div.musik::before{
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  overflow: hidden;
   padding: 0 0 0 2em;
+  overflow: hidden;
   /*display: flex;*/
   /*! flex-wrap: wrap; */
   /*! flex-flow: row; */

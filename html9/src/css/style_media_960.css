@@ -181,6 +181,8 @@
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
+    overflow: hidden;
+    padding: 0 0 0 3em;
     /*display: flex;*/
     /*! flex-wrap: wrap; */
     /*! flex-flow: row; */
@@ -237,6 +239,7 @@
     margin: 0em auto 0;
     padding: 1em 0px 1em 2em;
     border-bottom: 1px solid #e6e6e6;
+    overflow: hidden;
   }
   .partners__elemetns{
     height: 60px;

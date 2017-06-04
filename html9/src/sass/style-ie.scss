@@ -75,13 +75,7 @@ div.conteiner{
 width: 80%;
 float: right;
 }
-.menu-site{
-  float: right;
-  /*display: flex;*/
-  flex-flow: row;
-  justify-content: flex-end;
-  width: 68%;
-}
+
 .menu-site__element{
   list-style: none;
   width: 16%;
@@ -93,11 +87,11 @@ float: right;
   display: none;
 }
 .menu-site{
-  /*display: flex;*/
+  float: right;
   flex-wrap: nowrap;
   position: relative;
   height: auto;
-  width: 97%;
+  width: 745px;
 
 }
 .menu-link{

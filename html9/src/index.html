@@ -9,12 +9,14 @@
     <title>My first, not last responsitive site</title>
     <!-- <script src="https://code.jquery.com/jquery-2.2.4.js"></script> -->
     <!--[if lt IE 9]>
+      <script type="text/javascript" src="../files/pie/PIE.js"></script>
 
     <![endif]-->
-    <script type="text/javascript" src="../files/pie/PIE.js"></script>
-    <link rel="stylesheet" href="css/norm.css">
-    <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/norm.css">
+
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_media_479.css">
     <link rel="stylesheet" href="css/style_media_480.css">
     <link rel="stylesheet" href="css/style_media_768.css">
@@ -320,6 +322,10 @@
     </div>
   </div>
     <footer class="copyright">
+      <!--[if lt IE 9]>
+        <div class="copyright">
+      <![endif]-->
+
       <div class="copyright__conteiner">
         <menu class="menu-site footer__menu">
           <li class="menu-site__element hover-buttom">
@@ -357,6 +363,9 @@
           Designed by <strong>Pingbull AS</strong>
         </p>
       </div>
+      <!--[if lt IE 9]>
+      </div>
+      <![endif]-->
     </footer>
   </div>
 <!-- livereload -->

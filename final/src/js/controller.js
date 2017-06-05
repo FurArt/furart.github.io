@@ -1,7 +1,7 @@
 try {
   define(
     'controller',
-    ['lodash'],
+    ['lodash', 'documentReady'],
     function( ) {
       return {
         Controller : function (model, view) {

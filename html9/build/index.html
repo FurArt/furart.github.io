@@ -1,15 +1,22 @@
 <!DOCTYPE html>
+  <!--[if lt IE 9]>
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <![endif]-->
+
 <html>
   <head>
     <meta charset="utf-8">
     <title>My first, not last responsitive site</title>
     <!-- <script src="https://code.jquery.com/jquery-2.2.4.js"></script> -->
-  <!--[if lt IE 9]>
-  <link rel="stylesheet" href="css/style-ie.css">
-<![endif]-->
-    <link rel="stylesheet" href="css/norm.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="../files/pie/PIE.js"></script>
+
+    <![endif]-->
+
     <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/norm.css">
+
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_media_479.css">
     <link rel="stylesheet" href="css/style_media_480.css">
     <link rel="stylesheet" href="css/style_media_768.css">
@@ -17,6 +24,11 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/style-ie.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <![endif]-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
   </head>
   <body>
     <div class="top-layer">
@@ -310,6 +322,10 @@
     </div>
   </div>
     <footer class="copyright">
+      <!--[if lt IE 9]>
+        <div class="copyright">
+      <![endif]-->
+
       <div class="copyright__conteiner">
         <menu class="menu-site footer__menu">
           <li class="menu-site__element hover-buttom">
@@ -347,6 +363,9 @@
           Designed by <strong>Pingbull AS</strong>
         </p>
       </div>
+      <!--[if lt IE 9]>
+      </div>
+      <![endif]-->
     </footer>
   </div>
 <!-- livereload -->

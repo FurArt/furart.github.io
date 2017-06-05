@@ -4,7 +4,7 @@
     height: 566px;
   }
     .conteiner{
-    max-width: 320px;
+    min-width: 320px;
     width: 100%;
     position: relative;
     margin: 0 auto;
@@ -83,14 +83,14 @@
     position: relative;
     text-align: center;
   }
-  
+
   .slider-heder{
     font-size: 46px;
     letter-spacing: 0.03em;
   }
   .red{
     clear:left;
-      
+
     display: block;
   }
   .slider-heder2{
@@ -178,7 +178,7 @@
     height: 36em;
   }
   .gradient-conteiner{
-    max-width: 320px;
+    min-width: 320px;
      margin: 0em auto 0;
   }
   .wrapper-white{
@@ -189,7 +189,7 @@
   }
   .wrapper-white__conteiner{
     width: 100%;
-    max-width: 320px;
+    min-width: 320px;
     margin: 0 auto;
   }
   .categer-for-footer{
@@ -244,7 +244,7 @@
     margin: 0 6% 0% 0%;
     }
   .partners{
-    max-width: 320px;
+    min-width: 320px;
     width: 100%;
     margin: 0em auto 0;
     padding: 1em 0px 1em 2em;
@@ -264,7 +264,7 @@
     background: #ececec;
   }
   .wrapper-gray_container{
-    max-width: 320px;
+    min-width: 320px;
     width: 100%;
     margin: 0 auto;
     padding: 5% 0 7% 0;
@@ -297,7 +297,7 @@
     height: 113px;
   }
   .copyright__conteiner{
-    max-width: 320px;
+    min-width: 320px;
     width: 100%;
     margin: 0% auto;
     padding-top: 2em;

@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css\style.css">
-    <title></title>
+    <script data-main="js/main" src="js/require.js"></script>
+    <title>World goIT</title>
   </head>
   <body>
     <p class="icon-air-plane"></p>
@@ -12,9 +13,21 @@
     <p class="icon-logo-desinger"></p>
     <p class="icon-tea"></p>
     <p class="icon-tv"></p>
-<p>
-  hello word
-</p>
+    <p>
+      Hello word
+    </p>
+
+    <script type="text/template" id="wrapper-tmpl">
+      <div class="wrapper">
+        Hello work!
+      </div>
+    </script>
+
+    <script type="text/template" id="li-tmpl">
+      <%for (var i = 0; i < count; i++ ) {%>
+        <li><input type="checkbox"><label class="checkbox-list-item"></label><p><%=li[i]%></p>  <span data-value="<%=li[i]%>" class="remove-item"></span></li>
+          <%};%>
+    </script>
 
   </body>
 </html>

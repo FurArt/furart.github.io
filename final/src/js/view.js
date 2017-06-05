@@ -1,7 +1,7 @@
 try {
   define(
     'view',
-    ['lodash', 'documentReady'],
+    ['lodash', 'documentReady', 'controller'],
     function( ) {
       return {
           View : function (data) {
@@ -12,42 +12,55 @@ try {
 
                   var tagTamplete =document.querySelector('#wrapper-tmpl').innerHTML;
 
-                  document.querySelector('.conteiner').innerHTML = tagTamplete ;
+                  document.querySelector('.container').innerHTML = tagTamplete ;
 
-                  that.renderImg(data);
+                  // that.renderImg(data);
                   that.writeCss();
                 });
+
               };
-            that.renderImg = function() {
-              var divWrapper = _.template(document.querySelector('#li-tmpl').innerHTML);
+
+            that.renderImg = function(e) {
+              var divWrapper = _.template(document.querySelector('#img-masonry').innerHTML);
               var base = {
-                count : data.length,
-                li : data
+                count : 7,
+                img : e.data.imgData
               };
+              console.log(base);
+              // .img["0"]["0"] - img
+              // .img["0"][1] - text for img
               document.querySelector('.wrapper').innerHTML = divWrapper(base);
             };
             that.writeCss = function() {
               var tagLinkCss = document.createElement('link');
-              console.log(tagLinkCss);
-              if (window.innerWidth < 768) {
-                tagLinkCss.setAttribute ( 'href', 'css/style-mobile.css' );
-                tagLinkCss.setAttribute ( 'rel', 'stylesheet' );
-                return document.querySelector('head').appendChild(tagLinkCss);
-              } else if ((window.innerWidth >= 768)&&(window.innerWidth < 940)) {
-                tagLinkCss.setAttribute ( 'href', 'css/style-table.css' );
-                tagLinkCss.setAttribute ( 'rel', 'stylesheet' );
-                return document.querySelector('head').appendChild(tagLinkCss);
-              } else {
-                tagLinkCss.setAttribute ( 'href', 'css/style-desktop.css' );
-                tagLinkCss.setAttribute ( 'rel', 'stylesheet' );
-                return document.querySelector('head').appendChild(tagLinkCss);
-              };
 
+              function addAttr(e) {
+                  tagLinkCss.setAttribute ( 'href', e );
+                  tagLinkCss.setAttribute ( 'rel', 'stylesheet' );
+                  return document.querySelector('head').appendChild(tagLinkCss);
+              }
+
+              if (window.innerWidth < 768) {
+                addAttr('css/style-mobile.css');
+              } else if ((window.innerWidth >= 768)&&(window.innerWidth < 940)) {
+                addAttr('css/style-table.css' );
+              } else {
+                addAttr('css/style-desktop.css');
+              };
             };
 
-
-
+            window.addEventListener("orientationchange", function() {
+              that.init(data);
+            });
             that.init(data);
+            //this obc need for search DOM element
+            that.element = {
+                inputIdeas : document.querySelector('.ideas-input-form'),
+                inputBtn : document.querySelector('.ideas-btn')
+              }
+
+
+
           },
         //end module
       }

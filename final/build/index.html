@@ -7,18 +7,26 @@
     <title>World goIT</title>
   </head>
   <body>
-    <div class="conteiner"></div>
+  <div class="container"></div>
     <script type="text/template" id="wrapper-tmpl">
+      <form class="ideas-form" action="#">
+        <input type="text" class="ideas-input-form" placeholder="Enter your interests" >
+        <a href="#" class="ideas-btn">Search partners</a>
+      </form>
       <div class="wrapper">
-        If you see this, somesing go wrong!!
+        <!-- This must be empty, becuse wi send inform from API-->
       </div>
     </script>
 
-    <script type="text/template" id="li-tmpl">
-      <!-- Пример цикличності -->
+    <script type="text/template" id="img-masonry">
       <%for (var i = 0; i < count; i++ ) {%>
-        <li><input type="checkbox"><label class="checkbox-list-item"></label><p><%=li[i]%></p>  <span data-value="<%=li[i]%>" class="remove-item"></span></li>
-          <%};%>
+        <div class="masonry">
+          <img src="<%=img[i][0]%>" alt="<%=img[i][1]%>" class="masonry-img">
+          <h6>
+            <%=img[i][1]%>
+          </h6>
+        </div>
+        <%};%>
     </script>
 
   </body>

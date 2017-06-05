@@ -23,8 +23,7 @@
       'controller'
     ],
     function(_, $, model, view, controller) {
-        var informForStart = ['Тут могла быть ваша реклама', 'Тут могла быть ваша реклама', 'Тут могла быть ваша реклама', 'Тут могла быть ваша реклама','Тут могла быть ваша реклама','Тут могла быть ваша реклама','Тут могла быть ваша реклама']
-        console.log(informForStart);
+        var informForStart = ['яблуко', 'апельсин', 'абрикос', 'какая-то гадость','вишня','слива','груша'] // тематика картинок при загрузке
         var initModel = new model.Model(informForStart);
         var initView = new view.View(initModel.data);
         var startControl = new controller.Controller(initModel, initView);

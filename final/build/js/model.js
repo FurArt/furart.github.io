@@ -1,0 +1,1 @@
+try{define("model",["lodash"],function(){return{Model:function(t){var e=this;return e.data=t,e.addItem=function(t){if(0!==t.length)return e.data.push(t),e.data},e.removeItem=function(t){if(0!==t.length){var a=e.data.indexOf(t);if(a!==-1)return e.data.splice(a,1),e.data}},this}}})}catch(e){console.log(e)}finally{}

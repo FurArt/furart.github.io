@@ -1,0 +1,1 @@
+try{define("view",["lodash"],function(){return{View:function(e){if("complete"==document.readyState){console.log("s");var n=this;n.init=function(e){var n=document.querySelector("#wrapper-tmpl").innerHTML;console.log(n),document.querySelector("body").appendChild("'"+n+"'")},n.init(e)}}}})}catch(e){console.log(e)}finally{}

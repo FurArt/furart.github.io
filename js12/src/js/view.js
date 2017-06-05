@@ -1,7 +1,7 @@
 try {
   define(
     'view',
-    ['lodash','jquery'],
+    ['lodash'],
     function( ) {
       return {
           View : function (data) {

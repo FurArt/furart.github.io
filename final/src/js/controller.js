@@ -29,7 +29,14 @@ try {
               _.forEach(baseImg.hits, function(value, key) {
                 model.data.addItem([value.webformatURL, value.tags]);
               });
-              view.renderImg(model);
+
+              var timerViewRenderImg = setInterval(view.renderImg(model), 200);
+              if (this.readyState === 4) {
+                setTimeout(function() {
+                  clearInterval(timerViewRenderImg);
+                }, 2000);
+              }
+              // view.renderImg(model);
               console.log('baseImg ', baseImg);
             }
             console.log('model', model);
@@ -49,7 +56,14 @@ try {
             $(function() {
               var num = getRandomArbitrary(0,7);
               sender(model.data.requestImg[num]);
+              console.log(model.data.requestImg[num]);
             });
+
+            //masonry start->>
+            // that.msnr = new Masonry(view.element.wrapper,{
+            //   columnWidth: '100%',
+            //   itemSelector: '.masonry'
+            // })
 
           },
       };

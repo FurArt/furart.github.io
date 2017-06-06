@@ -39,10 +39,11 @@ try {
                   tagLinkCss.setAttribute ( 'rel', 'stylesheet' );
                   return document.querySelector('head').appendChild(tagLinkCss);
               }
+              var withWindow = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-              if (window.innerWidth < 768) {
+              if (withWindow < 768) {
                 addAttr('css/style-mobile.css');
-              } else if ((window.innerWidth >= 768)&&(window.innerWidth < 940)) {
+              } else if ((withWindow <= 768)||(withWindow < 940)) {
                 addAttr('css/style-table.css' );
               } else {
                 addAttr('css/style-desktop.css');
@@ -56,8 +57,12 @@ try {
             //this obc need for search DOM element
             that.element = {
                 inputIdeas : document.querySelector('.ideas-input-form'),
-                inputBtn : document.querySelector('.ideas-btn')
-              }
+                inputBtn : document.querySelector('.ideas-btn'),
+                wrapper : document.querySelector('.wrapper'),
+                masonryItem : document.querySelector('.masonry')
+
+              };
+
 
 
 

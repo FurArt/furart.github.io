@@ -2,7 +2,7 @@
 /* ---------- START CONFIG ---------- */
 
 /* files */
-sassFiles = ['./src/sass/*.scss'];
+sassFiles = ['./src/sass/*.scss','./node_modules/normalize-scss/sass'];
 cssFiles = [
   './src/css/*.css'
 ];

@@ -3,7 +3,7 @@
       'lodash' :  'lodash.min',
       'documentReady': 'jquery.documentReady',
       'masonry': '//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min',
-      'lory':'lory.min'
+      'lory':'lory.min',
     },
     shim: {
       'lodash' : {
@@ -37,9 +37,22 @@
         var initModel = new model.Model(informForStart);
         var initView = new view.View(initModel.data);
         var startControl = new controller.Controller(initModel, initView);
+        console.log(initView.element.wrapper);
         var msnr = new masonry(initView.element.wrapper,{
             columnWidth: 320,
             itemSelector: '.masonry'
           });
+        lory.lory(initView.element.slider,{
+          rewind: true,
+          infinite: 1
+        });
+        lory.lory(initView.element.sliderSecond,{
+          rewind: true,
+          infinite: 1
+        });
+        lory.lory(initView.element.sliderThird,{
+          rewind: true,
+          infinite: 1
+        });
     }
   );

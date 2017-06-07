@@ -1,0 +1,59 @@
+/**
+            * (optional) define here the style definitions which should be applied on the slider container
+            * e.g. width including further controls like arrows etc.
+            */
+           .slider {
+             height: 300px;
+           }
+
+           .frame {
+               /**
+                * (optional) wrapper width, specifies width of the slider frame.
+                */
+               width: 315px;
+               height: 250px;
+               margin: 0 0 0 -157px;
+               left: 50%;
+               position: relative;
+               font-size: 0;
+               line-height: 0;
+               overflow: hidden;
+               white-space: nowrap;
+           }
+
+           .slides {
+               margin: 0 0 0 7px;
+               display: inline-block;
+           }
+
+           li {
+               box-sizing: border-box;
+               position: relative;
+               display: inline-block;
+               margin: 0 10px 0 10px;
+
+               /**
+                * (optional) if the content inside the slide element has a defined size.
+                */
+               width: 300px;
+           }
+
+           .prev, .next {
+               position: absolute;
+               top: 50%;
+               margin-top: -25px;
+               display: block;
+               cursor: pointer;
+           }
+
+           .next {
+               right: 0;
+           }
+
+           .prev {
+               left: 0;
+           }
+
+           .next svg, .prev svg {
+               width: 25px;
+           }

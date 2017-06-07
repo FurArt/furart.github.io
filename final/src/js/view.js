@@ -59,12 +59,11 @@ try {
                 inputIdeas : document.querySelector('.ideas-input-form'),
                 inputBtn : document.querySelector('.ideas-btn'),
                 wrapper : document.querySelector('.wrapper'),
-                masonryItem : document.querySelector('.masonry')
-
+                masonryItem : document.querySelector('.masonry'),
+                slider : document.querySelector('#first-slider'),
+                sliderSecond :document.querySelector('#second-slider'),
+                sliderThird :document.querySelector('#third-slider'),
               };
-
-
-
 
           },
         //end module

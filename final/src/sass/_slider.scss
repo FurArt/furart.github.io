@@ -15,10 +15,11 @@
                margin: 0 0 0 -157px;
                left: 50%;
                position: relative;
-               font-size: 0;
-               line-height: 0;
+              //  font-size: 0;
+              //  line-height: 0;
                overflow: hidden;
                white-space: nowrap;
+               text-align: left;
            }
 
            .slides {
@@ -41,19 +42,34 @@
            .prev, .next {
                position: absolute;
                top: 50%;
-               margin-top: -25px;
+               margin-top: -50px;
                display: block;
                cursor: pointer;
            }
 
            .next {
-               right: 0;
+               right: 50%;
+               margin-right: -150px;
+
            }
 
            .prev {
-               left: 0;
+               left: 50%;
+               margin-left: -150px;
            }
 
            .next svg, .prev svg {
                width: 25px;
+           }
+           .next, .prev {
+             img{
+               height: 60px;
+               width: auto;
+             }
+           }
+           .slider-element{
+             span, h2, p{
+
+              //  white-space: normal;
+             }
            }

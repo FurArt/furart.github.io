@@ -9,13 +9,14 @@
 
 .work{
   position: relative;
+  height: 890px;
   .header-work{
     text-align: center;
     display: inline-block;
     width: 100%;
     margin:  2em 0 0 0;
-    font-family: $font-familyP;
-    font-size: $fontsizeH*0.8;
+    font-family: $font-familyH;
+    font-size: $fontsizeH*0.7;
     line-height:  $fontsizeH;
     position: relative;
   }
@@ -49,23 +50,74 @@
       color: #fff;
 
       .step{
+        text-transform: uppercase;
+        white-space: pre-wrap;
         background:  #ff4e50;
         border-radius: 10px 10px;
         display: inline-block;
         width: 70px;
         text-align: center;
         letter-spacing: 0.2em;
-        height: 20px;
-        line-height: 20px;
+        height: 25px;
+        line-height: 25px;
+        font-family: $font-familyP;
+        padding: 0 2% 0 2%;
       }
 
       .head-slider{
+        white-space: pre-wrap;
+        height: 45px;
         font-size: $fontsizeH*0.67;
+        font-family: $font-familyH;
         text-align: left;
       }
       .text-slider{
         font-family: $font-familyP;
+        white-space: pre-wrap;
+      }
       }
     }
   }
+.prev, .next{
+  img{
+    display: none;
+  }
+}
+.container-wrapper{
+  position: relative;
+  overflow: hidden;
+  height: auto;
+}
+.masonry{
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 1em auto;
+  z-index: 3;
+  img{
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    z-index: 2;
+    // width: 80%;
+    // height: auto;
+  }
+
+  h6{
+    position: absolute;
+    font-size: $fontsizeH*0.67;
+    font-family: $font-familyH;
+    color: #FFF;
+    left: 50%;
+    width: 150px;
+    margin: 0 0 0 -75px;
+    top: 33%;
+    text-transform: capitalize;
+    z-index: 4;
+  }
+}
+.head-ideas{
+  font-size: $fontsizeH*0.67;
 }

@@ -14,9 +14,15 @@ try {
           console.log('model', model);
           console.log('view ', view);
           view.element.inputBtn.addEventListener('click', sendRequest);
+          view.element.inputIdeas.addEventListener('keypress', function(e) {
+            if (e.keyCode===13) {
+              sendRequest();
+            };
+          });
+
           function sender(r) {
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'https://pixabay.com/api/?key=5553692-b6d8cb2b30635222df6f2566b&q='+r+'&image_type=photo&min_width=320&lang=en+ru', true);
+            xhr.open('GET', 'https://pixabay.com/api/?key=5553692-b6d8cb2b30635222df6f2566b&q='+r+'&image_type=photo&min_width=800&lang=en+ru', true);
             xhr.send();
             xhr.onreadystatechange = function() {
               if (this.readyState != 4) return;

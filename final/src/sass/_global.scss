@@ -1,3 +1,7 @@
+@mixin icon-image($spriteIcon){
+  @include sprite($spriteIcon);
+}
+
 *{
   // box-sizing: border-box;
 }
@@ -12,6 +16,10 @@ h1, h2, h3, h4, h4, h5{
   text-align: center;
   display: inline-block;
 }
+p{
+  font-family: $font-familyP;
+}
+
 .container, .wrapper{
   width: 100%;
   height: auto;
@@ -88,6 +96,169 @@ h1, h2, h3, h4, h4, h5{
   }
 }
 
+
 .wrapper, .ideas-form{
-  display: none;
+  // display: none;
+}
+
+.partner{
+  text-align: center;
+  .header-partner{
+    font-size: 20px;
+    font-family: $font-familyH;
+    letter-spacing: 0.2em;
+  }
+
+  .conteiner-partner{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .tv, .alhimia, .tea, .fly{
+    position: relative;
+    &::after{
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 33px;
+      height: 33px;
+      bottom: 0;
+      right: 50%;
+      margin: 0 -70px 0 0;
+      border-radius: 33px;
+      border: 5px solid #fff;
+      z-index: 1;
+    }
+    &::before{
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 33px;
+      height: 33px;
+      z-index: 2;
+      bottom: 15px;
+      right: 50%;
+      margin: 0 -56px 0 0;
+    }
+  }
+
+  .tv{
+    &::after{
+      background: #ff4e50;
+    }
+    &::before{
+      @include icon-image($icon-tv);
+    }
+  }
+
+  .alhimia{
+    &::after{
+      background: #ffa507;
+    }
+    &::before{
+      @include icon-image($icon-butel);
+    }
+  }
+  .tea{
+    &::after{
+      background: #1cd7ad;
+    }
+    &::before{
+      @include icon-image($icon-tea);
+    }
+  }
+  .fly{
+    &::after{
+      background: #4e73db;
+    }
+    &::before{
+      @include icon-image($icon-air-plane);
+    }
+  }
+  .photo-partner{
+    position: relative;
+    border-radius: 120px;
+  }
+  .name{
+    width: 100%;
+  }
+}
+.partner-search{
+  color: #ff4e50;
+  width: 15em;
+  border-radius: 20px;
+  border: 2px solid #ff4e50;
+  &:hover{
+    background: #ff4e50;
+    color: #fff;
+    border: 2px solid #ff4e50;
+    &::before{
+      display: none;
+    }
+  }
+}
+
+.ideas{
+  text-align: center;
+  border-radius: 20px;
+  a{
+    width: 15em;
+    color: #ff4e50;
+    border: 2px solid #ff4e50;
+    border-radius: 20px;
+    &:hover{
+      background: #ff4e50;
+      color: #fff;
+
+      &::before{
+        display: none;
+      }
+    }
+  }
+}
+
+.ideas-input-form{
+  width: 80%;
+  padding: 0 0 0 4%;
+  box-sizing: border-box;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid #cccccc;
+}
+footer{
+  border-top: 4px solid #ff4e50;
+  font-family: $font-familyH;
+  margin: 3em auto;
+  .container-footer{
+
+    width: 100%;
+    text-align: center;
+  }
+  .name-company{
+    color: #ff4e50;
+    font-size: 16px;
+    font-family: $font-familyH;
+  }
+  li{
+
+    float: left;
+    width: 17%;
+    font-family: $font-familyP;
+  }
+  ul{
+    -webkit-padding-start: 0;
+    overflow: hidden;
+    height: auto;
+  }
+  .partners, .desinger{
+    clear: both;
+    margin: 1em 0 0 0;
+  }
+  .desinger{
+    color: #ccc;
+    span{
+      display: inline-block;
+      @include sprite($icon-logo-desinger)
+    }
+  }
 }

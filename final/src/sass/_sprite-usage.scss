@@ -8,14 +8,10 @@
   @include sprite($icon-logo-desinger);
 }
 .icon-tea{
-  @include sprite(
-    $icon-tea
-  );
+  @include sprite($icon-tea);
 
 }
 .icon-tv{
-  @include sprite(
-    $icon-tv
-  );
+  @include sprite($icon-tv);
 
 }

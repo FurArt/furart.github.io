@@ -39,20 +39,26 @@
         var startControl = new controller.Controller(initModel, initView);
         console.log(initView.element.wrapper);
         var msnr = new masonry(initView.element.wrapper,{
-            columnWidth: 320,
-            itemSelector: '.masonry'
+            // columnWidth: 220,
+            itemSelector: '.masonry',
           });
-        lory.lory(initView.element.slider,{
-          rewind: true,
-          infinite: 1
-        });
-        lory.lory(initView.element.sliderSecond,{
-          rewind: true,
-          infinite: 1
-        });
-        lory.lory(initView.element.sliderThird,{
-          rewind: true,
-          infinite: 1
-        });
+          initView.element.wrapper.style.height = "auto";
+          lory.lory(initView.element.slider,{
+            rewind: true,
+            infinite: 1
+          });
+          lory.lory(initView.element.sliderSecond,{
+            rewind: true,
+            infinite: 1
+          });
+          lory.lory(initView.element.sliderThird,{
+            rewind: true,
+            infinite: 1
+          });
     }
   );
+
+
+if (true) {
+
+}

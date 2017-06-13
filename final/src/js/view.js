@@ -23,7 +23,7 @@ try {
             that.renderImg = function(e) {
               var divWrapper = _.template(document.querySelector('#img-masonry').innerHTML);
               var base = {
-                count : 7,
+                count : 10,
                 img : e.data.imgData
               };
               console.log(base);

@@ -211,10 +211,10 @@
     <script type="text/template" id="img-masonry">
       <%for (var i = 0; i < count; i++ ) {
 
-        if(i%5){%>
-        <div class="masonry">
-          <%} else {%>
+        if(i===4||i===5){%>
           <div class="masonry masonry--width2">
+          <%} else {%>
+            <div class="masonry">
             <%}%>
           <img src="<%=img[i][0]%>" alt="<%=img[i][1]%>" class="masonry-img">
           <h6>

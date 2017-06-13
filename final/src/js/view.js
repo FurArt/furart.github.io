@@ -23,7 +23,7 @@ try {
             that.renderImg = function(e) {
               var divWrapper = _.template(document.querySelector('#img-masonry').innerHTML);
               var base = {
-                count : 10,
+                count : 7,
                 img : e.data.imgData
               };
               console.log(base);
@@ -59,7 +59,7 @@ try {
                 inputIdeas : document.querySelector('.ideas-input-form'),
                 inputBtn : document.querySelector('.ideas-btn'),
                 wrapper : document.querySelector('.wrapper'),
-                masonryItem : document.querySelector('.masonry'),
+                masonryItem : document.querySelectorAll('.masonry'),
                 slider : document.querySelector('#first-slider'),
                 sliderSecond :document.querySelector('#second-slider'),
                 sliderThird :document.querySelector('#third-slider'),

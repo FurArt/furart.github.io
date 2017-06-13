@@ -49,16 +49,18 @@
   }
   #first-slider{
     top: 0;
-    margin-left: 3em;
+    margin-left: -471px;
+    left: 50%;
   }
   #second-slider{
     left: 50%;
     top: 0;
-    margin-left: -92px;
+    margin-left: -150px;
   }
   #third-slider{
     top: 0;
-    right: 0;
+    right: 50%;
+    margin-right: -471px;
   }
   .slider {
     margin: 9.1em 0 0;

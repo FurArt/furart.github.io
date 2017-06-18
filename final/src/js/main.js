@@ -4,7 +4,7 @@
       'documentReady': 'jquery.documentReady',
       'masonry': 'masonry.pkgd.min',
       'lory':'lory.min',
-      'imagesloaded':'//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd'
+      'imagesloaded':'imagesloaded.pkgd'
     },
     shim: {
       'lodash' : {
@@ -43,23 +43,37 @@
         var initView = new view.View(initModel.data);
         var startControl = new controller.Controller(initModel, initView);
         //masonry
+        console.log();
+        var msnr;
         function loadMasonary() {
-          if (startControl.load === 1) {
+          // if (startControl.load === 1) {
 
-            var msnr = new masonry(initView.element.wrapper,{
+            msnr = new masonry(initView.element.wrapper,{
               columnWidth: 300,
               itemSelector: '.masonry',
               gutter:20,
             });
             startControl.load = 0;
             console.log('done!',msnr);
-          } else {
+          // } else {
             console.log('load');
             clearInterval(masonryLoadTime)
-          }
+          // }
         };
 
         var masonryLoadTime = setInterval(loadMasonary, 200);
+        function watchImageload() {
+          imagesLoaded(initView.element.wrapper).on('progress',function() {
+            loadMasonary();
+          });
+        };
+        watchImageload()
+        initView.element.inputBtn.addEventListener('click', watchImageload)
+        initView.element.inputIdeas.addEventListener('keypress', function(e) {
+          if (e.keyCode===13) {
+            watchImageload();
+          };
+        });
         try {
           // startControl.sendRequest(masonryLoadTime);
 

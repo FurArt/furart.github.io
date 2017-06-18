@@ -60,6 +60,7 @@ try {
                 inputBtn : document.querySelector('.ideas-btn'),
                 wrapper : document.querySelector('.wrapper'),
                 masonryItem : document.querySelectorAll('.masonry'),
+                masonryImg : document.querySelectorAll('.masonry-img'),
                 slider : document.querySelector('#first-slider'),
                 sliderSecond :document.querySelector('#second-slider'),
                 sliderThird :document.querySelector('#third-slider'),

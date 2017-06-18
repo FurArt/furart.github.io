@@ -38,7 +38,7 @@
       'controller'
     ],
     function(_, $, imagesLoaded, masonry, lory, model, view, controller) {
-        var informForStart = ['яблуко', 'апельсин', 'абрикос','машина','вишня','слива','груша'] // тематика картинок при загрузке
+        var informForStart = ['абрикос', 'машина','вишня','слива','груша'] // тематика картинок при загрузке
         var initModel = new model.Model(informForStart);
         var initView = new view.View(initModel.data);
         var startControl = new controller.Controller(initModel, initView);
@@ -49,10 +49,19 @@
           // if (startControl.load === 1) {
 
             msnr = new masonry(initView.element.wrapper,{
-              columnWidth: 300,
               itemSelector: '.masonry',
               gutter:20,
             });
+
+            if (initView.withWindow < 768) {
+              msnr.columnWidth = 300;
+            } else if ((initView.withWindow <= 768)||(initView.withWindow < 940)) {
+              msnr.columnWidth = 225;
+            } else {
+              msnr.columnWidth = 300;
+            };
+
+
             startControl.load = 0;
             console.log('done!',msnr);
           // } else {

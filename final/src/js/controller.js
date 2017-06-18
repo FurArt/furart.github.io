@@ -59,9 +59,11 @@ try {
             };
             //load img->>
             $(function() {
-              var num = getRandomArbitrary(0,7);
+              var num = getRandomArbitrary(0,model.data.requestImg.length);
               sender(model.data.requestImg[num]);
+              console.log(model.data.requestImg[num]);
             });
+
 
 
 

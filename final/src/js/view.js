@@ -39,11 +39,11 @@ try {
                   tagLinkCss.setAttribute ( 'rel', 'stylesheet' );
                   return document.querySelector('head').appendChild(tagLinkCss);
               }
-              var withWindow = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+              that.withWindow = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-              if (withWindow < 768) {
+              if (that.withWindow < 768) {
                 addAttr('css/style-mobile.css');
-              } else if ((withWindow <= 768)||(withWindow < 940)) {
+              } else if ((that.withWindow <= 768)||(that.withWindow < 940)) {
                 addAttr('css/style-table.css' );
               } else {
                 addAttr('css/style-desktop.css');

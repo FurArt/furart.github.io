@@ -41,21 +41,21 @@
 
            .prev, .next {
                position: absolute;
-               top: 50%;
-               margin-top: -50px;
+               top: 20%;
+              //  margin-top: -50px;
               //  display: block;
                cursor: pointer;
            }
 
            .next {
                right: 50%;
-               margin-right: -150px;
+               margin-right: -144px;
 
            }
 
            .prev {
                left: 50%;
-               margin-left: -150px;
+               margin-left: -144px;
            }
 
            .next svg, .prev svg {

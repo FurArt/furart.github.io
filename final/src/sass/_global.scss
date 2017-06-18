@@ -86,9 +86,11 @@ p{
     width: 280px;
     border: 2px solid #ff4e50;
     border-radius: 20px 20px;
+    background: #ff4e50;
 
     &:hover{
-      background: #ff4e50;
+      background: none;
+
     }
     &:hover::before{
       display: none;
@@ -184,13 +186,14 @@ p{
   }
 }
 .partner-search{
-  color: #ff4e50;
+  color: #fff;
   width: 15em;
   border-radius: 20px;
   border: 2px solid #ff4e50;
+  background: #ff4e50;
   &:hover{
-    background: #ff4e50;
-    color: #fff;
+    background: none;
+    color: #000;
     border: 2px solid #ff4e50;
     &::before{
       display: none;
@@ -203,12 +206,14 @@ p{
   border-radius: 20px;
   a{
     width: 15em;
-    color: #ff4e50;
+    color: #fff;
     border: 2px solid #ff4e50;
     border-radius: 20px;
+    background: #ff4e50;
+
     &:hover{
-      background: #ff4e50;
-      color: #fff;
+      background: none;
+      color: #000;
 
       &::before{
         display: none;

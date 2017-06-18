@@ -7,7 +7,9 @@
   width: 940px;
 }
 .top-wrapper{
-  background-size: 100%;
+  @media screen and (min-width: 1440px) {
+    background-size: 100%;
+  }
   form{
     float: right;
     width: 40%;
@@ -248,13 +250,13 @@
 
 .ideas{
   .container-link{
-    width: 25%;
+    margin: 0 0 0 1em;
     clear: left;
     display: inline-block;
   }
   .ideas-input-form{
     clear: left;
-    width: 40%;
+    width: 240px;
   }
 }
 
@@ -274,7 +276,10 @@ footer{
     margin: 2.33em auto;
     float: left;
     width: auto;
+    text-align: left;
+    padding: 0 0 0 6em;
     li{
+      text-align: left;
       width: 100%;
     }
   }
